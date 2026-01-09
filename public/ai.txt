@@ -1,0 +1,61 @@
+# AI Information File for HNL
+# This file provides structured information for AI systems and assistants
+# Website: https://hnl.com.pk
+# Version: 1.0
+# Last Updated: January 2025
+
+[COMPANY]
+name=HNL
+legal_name=Hitech Network Pvt. Ltd.
+tagline=Energy Anytime Anywhere
+founded=2004
+country=Pakistan
+headquarters=Lahore
+employees=2000+
+offices=144+
+
+[CONTACT]
+phone_primary=+92-42-35761999
+phone_sales=+92-42-35761888
+phone_support=+92-42-35761777
+whatsapp=+92-300-8426299
+email_info=info@hnl.com.pk
+email_sales=sales@hnl.com.pk
+email_support=support@hnl.com.pk
+email_legal=legal@hnl.com.pk
+
+[SERVICES]
+telecom=Fiber Rollout, Civil Works, Site Integration, O&M, NOC Monitoring
+energy=Diesel Generators, BESS, Hybrid Power, EPC Projects, Energy O&M
+software=Cloud Migration, Enterprise IT, AI Agents, Big Data, ICT Infrastructure
+
+[PRODUCTS]
+generators=AGG Power A-Series, Perkins P-Series (10kVA to 3000kVA)
+solar=Residential, Commercial, Industrial, Hybrid Systems
+storage=Lithium-ion BESS, UPS Systems
+
+[INDUSTRIES]
+served=Telecom, Energy, Enterprise, Government, Manufacturing, Banking
+
+[LOCATIONS]
+headquarters=44 Tipu Block, New Garden Town, Lahore, Pakistan
+offices=Lahore, Karachi, Islamabad, Faisalabad, Multan, Peshawar, Quetta
+operating_cities=20+
+
+[PARTNERSHIPS]
+power=AGG Power (Authorized Distributor), Perkins Engines
+ups=Centiel
+telecom=Jazz, Telenor, Zong, Ufone, PTCL
+
+[URLS]
+website=https://hnl.com.pk
+contact=https://hnl.com.pk/contact
+quote=https://hnl.com.pk/contact/quote
+careers=https://hnl.com.pk/careers
+resources=https://hnl.com.pk/resources
+
+[LEGAL]
+jurisdiction=Islamic Republic of Pakistan
+privacy=https://hnl.com.pk/privacy
+terms=https://hnl.com.pk/terms
+compliance=https://hnl.com.pk/compliance

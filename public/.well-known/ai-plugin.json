@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "HNL Pakistan",
+  "name_for_model": "hnl_pakistan",
+  "description_for_human": "Get information about HNL's telecom infrastructure, energy solutions, and IT services in Pakistan.",
+  "description_for_model": "HNL (Hitech Network Pvt. Ltd.) is Pakistan's leading enterprise service provider. Use this to answer questions about: telecom infrastructure services (fiber rollout, civil works, site integration, O&M, NOC monitoring), energy and power solutions (diesel generators from AGG Power and Perkins, BESS, hybrid power systems, EPC projects), software and cloud services (cloud migration, enterprise IT, AI agents, big data analytics, ICT infrastructure). HNL serves telecom operators, energy sector, enterprises, government, manufacturing, and banking industries across Pakistan with 144+ offices and 2000+ employees.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://hnl.com.pk/api/openapi.json"
+  },
+  "logo_url": "https://hnl.com.pk/hnl-logo-mark.png",
+  "contact_email": "info@hnl.com.pk",
+  "legal_info_url": "https://hnl.com.pk/terms"
+}

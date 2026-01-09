@@ -1,0 +1,130 @@
+# HNL Robots.txt
+# Last Updated: January 2025
+# Website: https://hnl.com.pk
+
+# Allow all major search engines
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: BingPreview
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# AI Crawlers - OpenAI/ChatGPT
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+
+# AI Crawlers - Google AI/Gemini
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 2
+
+# AI Crawlers - Anthropic/Claude
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 2
+
+User-agent: Claude-Web
+Allow: /
+
+# AI Crawlers - Perplexity
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+# AI Crawlers - Meta
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# AI Crawlers - Cohere
+User-agent: cohere-ai
+Allow: /
+
+# AI Crawlers - Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Social Media
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Disallow private/admin areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/static/
+Disallow: /_next/image/
+Disallow: /*.json$
+Disallow: /scripts/
+
+# Allow important static files
+Allow: /_next/static/css/
+Allow: /_next/static/js/
+Allow: /_next/static/media/
+Allow: /sitemap*.xml
+Allow: /robots.txt
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /ai.txt
+Allow: /.well-known/
+
+# Sitemaps
+Sitemap: https://hnl.com.pk/sitemap.xml
+Sitemap: https://hnl.com.pk/sitemap-main.xml
+Sitemap: https://hnl.com.pk/sitemap-products.xml
+Sitemap: https://hnl.com.pk/sitemap-services.xml
+Sitemap: https://hnl.com.pk/sitemap-resources.xml
+
+# Host
+Host: https://hnl.com.pk

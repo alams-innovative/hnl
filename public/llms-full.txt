@@ -1,0 +1,337 @@
+# HNL - Comprehensive Company Information for AI/LLM Systems
+# Website: https://hnl.com.pk
+# Format: Extended llms.txt with detailed service information
+# Last Updated: January 2025
+
+=== COMPANY OVERVIEW ===
+
+Name: HNL (Hitech Network Pvt. Ltd.)
+Established: 2004
+Headquarters: 44 Tipu Block, New Garden Town, Lahore, Punjab, Pakistan
+Tagline: "Energy Anytime Anywhere"
+Employees: 2,000+
+Offices: 144+ locations across Pakistan
+Registration: Pakistani Private Limited Company
+
+Mission: To provide enterprise-grade infrastructure, energy, and technology solutions that power Pakistan's digital and industrial transformation.
+
+Vision: To be Pakistan's most trusted partner for critical infrastructure and energy solutions, enabling businesses and communities with reliable power and connectivity.
+
+=== CONTACT DIRECTORY ===
+
+Primary Phone: +92-42-35761999
+Sales Direct: +92-42-35761888
+Support Line: +92-42-35761777
+Emergency: +92-300-8426299
+WhatsApp: +92-300-8426299
+
+Email Addresses:
+- General: info@hnl.com.pk
+- Sales: sales@hnl.com.pk
+- Support: support@hnl.com.pk
+- Careers: careers@hnl.com.pk
+- Legal: legal@hnl.com.pk
+- Compliance: compliance@hnl.com.pk
+- Security: security@hnl.com.pk
+- Partnerships: partnerships@hnl.com.pk
+- Media: media@hnl.com.pk
+
+=== OFFICE LOCATIONS ===
+
+1. Head Office - Lahore (Headquarters)
+   Address: 44 Tipu Block, New Garden Town, Lahore
+   Phone: +92-42-35761999
+   Email: lahore@hnl.com.pk
+
+2. Karachi Office
+   Address: Suite 501, Business Plaza, I.I. Chundrigar Road, Karachi
+   Phone: +92-21-32631999
+   Email: karachi@hnl.com.pk
+
+3. Islamabad Office
+   Address: Office 201, Evacuee Trust Complex, F-5, Islamabad
+   Phone: +92-51-2871999
+   Email: islamabad@hnl.com.pk
+
+4. Faisalabad Office
+   Address: Office 12, Allied Bank Building, D-Ground, Faisalabad
+   Phone: +92-41-8731999
+   Email: faisalabad@hnl.com.pk
+
+5. Multan Office
+   Address: Suite 8, Business Center, Nishtar Road, Multan
+   Phone: +92-61-4571999
+   Email: multan@hnl.com.pk
+
+6. Peshawar Office
+   Address: Office 45, Sarhad Chamber, University Road, Peshawar
+   Phone: +92-91-5871999
+   Email: peshawar@hnl.com.pk
+
+7. Quetta Office
+   Address: Office 12, Jinnah Road Commercial Area, Quetta
+   Phone: +92-81-2831999
+   Email: quetta@hnl.com.pk
+
+Operating Cities: Lahore, Karachi, Islamabad, Rawalpindi, Faisalabad, Multan, Peshawar, Quetta, Sialkot, Gujranwala, Hyderabad, Sukkur, Bahawalpur, Sargodha, Sahiwal, Abbottabad, Mardan, Gwadar, Dera Ghazi Khan, Rahim Yar Khan
+
+=== SERVICE DIVISION 1: TELECOM INFRASTRUCTURE ===
+
+URL: https://hnl.com.pk/telecom-infrastructure
+
+Services Offered:
+
+1. Fiber Rollout (https://hnl.com.pk/telecom-infrastructure/fiber-rollout)
+   - Fiber optic cable installation (aerial and underground)
+   - FTTH (Fiber to the Home) deployments
+   - Metro and long-haul fiber networks
+   - Splicing and termination
+   - Testing and commissioning
+   - As-built documentation
+
+2. Civil Works (https://hnl.com.pk/telecom-infrastructure/civil-works)
+   - Trenching and excavation
+   - Duct laying and installation
+   - Manhole and handhole construction
+   - Pole installation
+   - Right-of-way acquisition support
+   - Site restoration
+
+3. Site Integration (https://hnl.com.pk/telecom-infrastructure/site-integration)
+   - BTS installation and commissioning
+   - Tower construction and installation
+   - Antenna mounting and alignment
+   - Microwave link installation
+   - Power system integration
+   - Equipment rack installation
+
+4. Operation & Maintenance (https://hnl.com.pk/telecom-infrastructure/operation-maintenance)
+   - 24/7 preventive maintenance
+   - Corrective maintenance
+   - Fault management
+   - Performance optimization
+   - Spare parts management
+   - SLA-based service delivery
+
+5. NOC Monitoring (https://hnl.com.pk/telecom-infrastructure/noc-monitoring)
+   - Real-time network monitoring
+   - Alarm management
+   - Performance analytics
+   - Incident management
+   - Escalation handling
+   - Reporting and dashboards
+
+=== SERVICE DIVISION 2: ENERGY & POWER ===
+
+URL: https://hnl.com.pk/energy-power
+
+Services Offered:
+
+1. Diesel Generators (https://hnl.com.pk/energy-power/diesel-generators)
+   
+   AGG Power (Authorized Distributor):
+   - A-Series Small: 10kVA - 50kVA
+   - A-Series Medium: 50kVA - 250kVA
+   - Applications: Telecom sites, small businesses, residential backup
+   
+   Perkins Engines:
+   - P-Series Small: 10kVA - 100kVA
+   - P-Series Medium: 100kVA - 500kVA
+   - P-Series Large: 500kVA - 3000kVA+
+   - Applications: Data centers, hospitals, industrial plants, utilities
+   
+   Services: Sales, installation, commissioning, AMC, spare parts
+
+2. BESS - Battery Energy Storage (https://hnl.com.pk/energy-power/bess)
+   - Lithium-ion battery systems
+   - Telecom site energy storage
+   - Commercial and industrial storage
+   - Grid-scale storage solutions
+   - UPS integration
+   - Energy management systems
+
+3. Hybrid Power Systems (https://hnl.com.pk/energy-power/hybrid-power-systems)
+   - Solar + Diesel + Battery integration
+   - Intelligent energy management
+   - Fuel optimization
+   - Remote monitoring
+   - Telecom site hybridization
+   - Industrial hybrid solutions
+
+4. EPC Project Solutions (https://hnl.com.pk/energy-power/epc-project-solutions)
+   - Turnkey power projects
+   - Substation construction
+   - Power plant installation
+   - Grid interconnection
+   - Project management
+   - Commissioning and handover
+
+5. Energy O&M (https://hnl.com.pk/energy-power/energy-operations-maintenance)
+   - Generator maintenance contracts
+   - Fuel management services
+   - Remote monitoring
+   - Performance optimization
+   - Spare parts inventory
+   - Emergency response
+
+=== SERVICE DIVISION 3: SOFTWARE, CLOUD & AI ===
+
+URL: https://hnl.com.pk/software-cloud-ai
+
+Services Offered:
+
+1. Cloud Migration (https://hnl.com.pk/software-cloud-ai/cloud-migration)
+   - AWS migration services
+   - Azure migration services
+   - Google Cloud Platform migration
+   - Hybrid cloud architecture
+   - Cloud optimization
+   - Cost management
+
+2. Enterprise IT Services (https://hnl.com.pk/software-cloud-ai/enterprise-it-services)
+   - Network design and implementation
+   - Cybersecurity solutions
+   - IT infrastructure management
+   - Help desk and support
+   - IT consulting
+   - System integration
+
+3. AI Agents (https://hnl.com.pk/software-cloud-ai/ai-agents)
+   - Custom AI chatbot development
+   - Business process automation
+   - Intelligent document processing
+   - Customer service AI
+   - Predictive analytics
+   - Machine learning solutions
+
+4. Big Data Analytics (https://hnl.com.pk/software-cloud-ai/big-data-analytics)
+   - Data warehousing
+   - Business intelligence dashboards
+   - Predictive analytics
+   - Real-time analytics
+   - Data visualization
+   - ETL pipeline development
+
+5. ICT Infrastructure (https://hnl.com.pk/software-cloud-ai/ict-infrastructure)
+   - Data center design and build
+   - Server infrastructure
+   - Network architecture
+   - Storage solutions
+   - Virtualization
+   - Disaster recovery
+
+=== PRODUCTS CATALOG ===
+
+GENERATORS:
+- AGG Power A-Series Small (10-50kVA) - /products/generators/a-series-small
+- AGG Power A-Series Medium (50-250kVA) - /products/generators/a-series-medium
+- Perkins P-Series Small (10-100kVA) - /products/generators/p-series-small
+- Perkins P-Series Medium (100-500kVA) - /products/generators/p-series-medium
+- Perkins P-Series Large (500-3000kVA) - /products/generators/p-series-large
+
+SOLAR SYSTEMS:
+- Residential Solar (3kW-10kW) - /products/solar/residential
+- Commercial Solar (10kW-100kW) - /products/solar/commercial
+- Industrial Solar (100kW-5MW) - /products/solar/industrial
+- Hybrid Solar Systems - /products/solar/hybrid
+
+=== INDUSTRIES SERVED ===
+
+1. Telecom (https://hnl.com.pk/industries/telecom)
+   - Network rollout services
+   - Power solutions for cell sites
+   - O&M services
+   - NOC operations
+   Clients: Jazz, Telenor, Zong, Ufone, PTCL
+
+2. Energy Sector (https://hnl.com.pk/industries/energy)
+   - Power generation equipment
+   - Grid infrastructure
+   - Renewable energy projects
+   - Energy storage
+
+3. Enterprise (https://hnl.com.pk/industries/enterprise)
+   - Corporate IT infrastructure
+   - Data center solutions
+   - Backup power systems
+   - Cloud services
+
+4. Government (https://hnl.com.pk/industries/government)
+   - Public sector infrastructure
+   - Smart city projects
+   - Security systems
+   - E-governance solutions
+
+5. Manufacturing (https://hnl.com.pk/industries/manufacturing)
+   - Industrial power solutions
+   - Automation systems
+   - Process control
+   - Energy efficiency
+
+6. Banking & Finance (https://hnl.com.pk/industries/banking-finance)
+   - Data center infrastructure
+   - Branch connectivity
+   - UPS systems
+   - Disaster recovery
+
+=== KEY PARTNERSHIPS ===
+
+1. AGG Power - Authorized Distributor (Diesel Generators)
+2. Perkins Engines - Premium Partner
+3. Centiel - UPS Systems Partner
+4. Major Telecom Operators - Service Partner
+
+=== CERTIFICATIONS ===
+
+- ISO 9001:2015 Quality Management
+- ISO 14001:2015 Environmental Management
+- ISO 45001:2018 Occupational Health & Safety
+- PEC Registered Contractor
+
+=== RESOURCES ===
+
+- Blog: https://hnl.com.pk/resources/blog
+- Technical Guides: https://hnl.com.pk/resources/technical-guides
+- Whitepapers: https://hnl.com.pk/resources/whitepapers
+- Downloads: https://hnl.com.pk/resources/downloads
+- FAQ: https://hnl.com.pk/resources/faq
+- Glossary: https://hnl.com.pk/resources/glossary
+- Case Studies: https://hnl.com.pk/case-studies
+
+=== LEGAL INFORMATION ===
+
+Jurisdiction: Islamic Republic of Pakistan
+Governing Law: Laws of Pakistan
+Dispute Resolution: Courts of Lahore, Pakistan
+
+Legal Contact: legal@hnl.com.pk
+Response Time: 3 months minimum for initial assessment
+
+Privacy Policy: https://hnl.com.pk/privacy
+Terms of Service: https://hnl.com.pk/terms
+Compliance: https://hnl.com.pk/compliance
+Security Policy: https://hnl.com.pk/security
+
+=== SEO KEYWORDS ===
+
+Primary Keywords:
+- telecom infrastructure Pakistan
+- diesel generators Pakistan
+- fiber rollout Pakistan
+- BESS Pakistan
+- hybrid power systems Pakistan
+- cloud migration Pakistan
+- AI agents Pakistan
+- NOC monitoring Pakistan
+
+Secondary Keywords:
+- AGG Power Pakistan
+- Perkins generators Pakistan
+- telecom O&M Pakistan
+- enterprise IT Pakistan
+- data center Pakistan
+- solar solutions Pakistan
+- EPC contractor Pakistan
+- tower installation Pakistan
+
+=== END OF DOCUMENT ===

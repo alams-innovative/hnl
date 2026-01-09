@@ -1,0 +1,98 @@
+# HNL - Enterprise Infrastructure, Energy & IT Solutions in Pakistan
+# Website: https://hnl.com.pk
+# Last Updated: January 2025
+
+## About HNL
+HNL (Hitech Network Pvt. Ltd.) is Pakistan's leading enterprise service provider established in 2004. With 2,000+ employees and 144+ offices nationwide, HNL delivers integrated solutions across telecom infrastructure, energy & power, and software/cloud/AI services.
+
+Tagline: Energy Anytime Anywhere
+Headquarters: 44 Tipu Block, New Garden Town, Lahore, Pakistan
+Phone: +92-42-35761999
+WhatsApp: +92-300-8426299
+Email: info@hnl.com.pk
+
+## Service Divisions
+
+### 1. Telecom Infrastructure
+URL: https://hnl.com.pk/telecom-infrastructure
+- Fiber Rollout: End-to-end fiber optic network deployment
+- Civil Works: Trenching, duct laying, manhole construction
+- Site Integration: BTS/tower installation and commissioning
+- Operation & Maintenance: 24/7 preventive and corrective maintenance
+- NOC Monitoring: Real-time network operations center services
+
+### 2. Energy & Power Solutions
+URL: https://hnl.com.pk/energy-power
+- Diesel Generators: Mission-critical backup power (10kVA to 3000kVA+)
+  - AGG Power: Authorized distributor in Pakistan
+  - Perkins Engines: Premium power solutions
+- BESS (Battery Energy Storage): Lithium-ion storage systems
+- Hybrid Power Systems: Solar + diesel + battery integration
+- EPC Project Solutions: Turnkey power infrastructure projects
+- Energy O&M: Preventive maintenance, fuel management, monitoring
+
+### 3. Software, Cloud & AI
+URL: https://hnl.com.pk/software-cloud-ai
+- Cloud Migration: AWS/Azure/GCP migration and optimization
+- Enterprise IT Services: Network design, cybersecurity, IT support
+- AI Agents: Custom AI automation for business processes
+- Big Data Analytics: Data warehousing, BI, predictive analytics
+- ICT Infrastructure: Data center setup, server infrastructure
+
+## Products
+
+### Diesel Generators
+- AGG Power A-Series: Small (10-50kVA), Medium (50-250kVA)
+- Perkins P-Series: Small, Medium, Large (up to 3000kVA)
+- Applications: Telecom sites, data centers, hospitals, industrial plants
+
+### Solar Solutions
+- Residential: 3kW-10kW home solar systems
+- Commercial: 10kW-100kW business installations
+- Industrial: 100kW-5MW large-scale projects
+- Hybrid: Solar + battery + grid integration
+
+## Industries Served
+- Telecom Operators: Jazz, Telenor, Zong, Ufone, PTCL
+- Energy Sector: Grid infrastructure, power generation
+- Enterprise: Banking, retail, healthcare IT
+- Government: Public sector infrastructure projects
+- Manufacturing: Industrial automation, power solutions
+- Banking & Finance: Data centers, branch connectivity
+
+## Geographic Coverage
+Primary Market: Pakistan (nationwide operations)
+Regional Offices: Lahore (HQ), Karachi, Islamabad, Faisalabad, Multan, Peshawar, Quetta
+Operating Cities: 20+ cities with field presence
+Total Offices: 144+ locations
+
+## Key Differentiators
+1. Pakistan-first expertise with deep local knowledge
+2. Integrated solutions across infrastructure, power, and IT
+3. 24/7 operations and technical support
+4. 20+ years of proven track record
+5. Partnerships with global brands (AGG Power, Perkins, Centiel)
+6. ISO certified operations
+
+## Contact Information
+- General Inquiries: info@hnl.com.pk
+- Sales: sales@hnl.com.pk | +92-42-35761888
+- Support: support@hnl.com.pk | +92-42-35761777
+- Careers: careers@hnl.com.pk
+- WhatsApp: +92-300-8426299
+
+## Important Links
+- Request Quote: https://hnl.com.pk/contact/quote
+- Find Locations: https://hnl.com.pk/contact/locations
+- Become Distributor: https://hnl.com.pk/contact/distributors
+- Case Studies: https://hnl.com.pk/case-studies
+- Technical Resources: https://hnl.com.pk/resources
+- Careers: https://hnl.com.pk/careers
+
+## Legal
+- Privacy Policy: https://hnl.com.pk/privacy
+- Terms of Service: https://hnl.com.pk/terms
+- Compliance: https://hnl.com.pk/compliance
+- Security: https://hnl.com.pk/security
+- Legal Contact: legal@hnl.com.pk
+- Jurisdiction: Islamic Republic of Pakistan
