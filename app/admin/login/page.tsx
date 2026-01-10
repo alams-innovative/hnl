@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
-import { Eye, EyeOff, Lock, Mail, Loader2, ShieldCheck, Sparkles, Shield, Users } from "lucide-react"
+import { Eye, EyeOff, Lock, Mail, Loader2, ShieldCheck } from "lucide-react"
 
 export default function AdminLoginPage() {
   const router = useRouter()
@@ -171,30 +171,6 @@ export default function AdminLoginPage() {
                     )}
                   </Button>
                 </form>
-
-                <div className="mt-6 rounded-xl border border-gray-200 bg-white/70 p-4">
-                  <p className="text-sm font-semibold text-gray-900 mb-2">Access Levels</p>
-                  <div className="space-y-2 text-sm text-gray-700">
-                    <div className="flex items-start gap-2">
-                      <Shield className="h-4 w-4 text-[#E31B23] mt-0.5" />
-                      <span>
-                        <span className="font-medium">Senior Management</span>: Full access
-                      </span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <Users className="h-4 w-4 text-[#E31B23] mt-0.5" />
-                      <span>
-                        <span className="font-medium">HR Manager</span>: Careers & Internships
-                      </span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <Sparkles className="h-4 w-4 text-[#E31B23] mt-0.5" />
-                      <span>
-                        <span className="font-medium">Marketing/Sales</span>: Inquiries, Distributors, Quotes & Chatbot
-                      </span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
