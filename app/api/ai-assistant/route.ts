@@ -1,5 +1,7 @@
-import { streamText } from "ai"
-import { openai } from "@ai-sdk/openai"
+type OpenAIChatMessage = {
+  role: "system" | "user" | "assistant"
+  content: string
+}
 
 export const maxDuration = 30
 
@@ -169,14 +171,52 @@ export async function POST(request: Request) {
         ? `\n\n=== LANGUAGE REQUIREMENT ===\nYou MUST respond ONLY in ${languageName}. All your responses, explanations, and suggestions must be written in ${languageName}. The only exceptions are:\n- URLs (keep as-is)\n- Brand names like "HNL", "AGG Power", "Perkins", "Centiel"\n- Email addresses and phone numbers\n\nDo NOT mix languages. Respond entirely in ${languageName}.`
         : ""
 
-    const result = streamText({
-      // Uses OpenAI provider (requires OPENAI_API_KEY in env)
-      model: openai("gpt-4o-mini"),
-      system: HNL_SYSTEM_PROMPT + languageInstruction,
-      messages: messages,
+    const system = HNL_SYSTEM_PROMPT + languageInstruction
+
+    // NOTE: We intentionally call OpenAI via fetch here (Chat Completions API)
+    // to avoid SDK version mismatches that caused all responses to fall back to /about.
+    // This works with simple text streaming on the frontend (it will just arrive in 1 chunk).
+    const openAiMessages: OpenAIChatMessage[] = [
+      { role: "system", content: system },
+      ...(messages as OpenAIChatMessage[]).map((m) => ({
+        role: m.role,
+        content: m.content,
+      })),
+    ]
+
+    const apiKey = process.env.OPENAI_API_KEY
+    if (!apiKey) {
+      throw new Error("OPENAI_API_KEY is not set")
+    }
+
+    const resp = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: openAiMessages,
+        temperature: 0.2,
+      }),
     })
 
-    return result.toTextStreamResponse()
+    if (!resp.ok) {
+      const errText = await resp.text().catch(() => "")
+      throw new Error(`OpenAI error: ${resp.status} ${errText}`)
+    }
+
+    const data = (await resp.json()) as any
+    const text = data?.choices?.[0]?.message?.content
+    if (!text || typeof text !== "string") {
+      throw new Error("OpenAI returned an empty response")
+    }
+
+    return new Response(text, {
+      status: 200,
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
+    })
   } catch (error) {
     console.error("AI Assistant Error:", error)
     const fallbackResponse =

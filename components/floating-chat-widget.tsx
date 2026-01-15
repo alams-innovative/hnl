@@ -305,6 +305,12 @@ export function FloatingChatWidget() {
       timestamp: new Date(),
     }
 
+    // Build outgoing message history (for smarter multi-turn answers)
+    const outgoingMessages = [...messages, userMessage].map((m) => ({
+      role: m.role,
+      content: m.content,
+    }))
+
     setMessages((prev) => [...prev, userMessage])
     setInputValue("")
     setIsLoading(true)
@@ -314,7 +320,8 @@ export function FloatingChatWidget() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message: content.trim(),
+          // Send full history so the assistant can stay coherent across turns.
+          messages: outgoingMessages,
           language: selectedLanguage,
           userName,
           userCompany,
