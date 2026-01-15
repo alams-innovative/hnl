@@ -351,7 +351,7 @@ export function FloatingChatWidget() {
 
       if (tagsMatch) {
         messageContent = fullText.replace(/TAGS?:\s*(.+)$/m, "").trim()
-        const tagLinks = tagsMatch[1].match(/\[([^\]]+)\]$$([^)]+)$$/g)
+        const tagLinks = tagsMatch[1].match(/\[[^\]]+\]\([^)]+\)/g)
         if (tagLinks) {
           tags = tagLinks.map((tag) => {
             const match = tag.match(/\[([^\]]+)\]/)
@@ -494,100 +494,132 @@ export function FloatingChatWidget() {
   }
 
   const renderMessageContent = (content: string) => {
-    const parts: React.ReactNode[] = []
-    let remaining = content
-    let keyIndex = 0
+    // Small "markdown-lite" renderer with good list + paragraph formatting.
+    // Supported:
+    // - **bold**
+    // - [text](/internal) and [text](https://external)
+    // - ordered lists: `1. ...`
+    // - bullet lists: `- ...` or `• ...`
+    const renderInline = (text: string, keyBase: string) => {
+      const parts: React.ReactNode[] = []
+      let i = 0
+      let keyIndex = 0
 
-    while (remaining.length > 0) {
-      const linkStart = remaining.indexOf("[")
-      const linkMid = remaining.indexOf("](")
-      const linkEnd = remaining.indexOf(")", linkMid)
+      while (i < text.length) {
+        // Link: [label](url)
+        const linkStart = text.indexOf("[", i)
+        const boldStart = text.indexOf("**", i)
 
-      const boldStart = remaining.indexOf("**")
-      const boldEnd = boldStart > -1 ? remaining.indexOf("**", boldStart + 2) : -1
-
-      const listMatch = remaining.match(/^(\d+)\.\s+(.+?)(?=\n|$)/)
-      const bulletMatch = remaining.match(/^[•-]\s+(.+?)(?=\n|$)/)
-
-      if (linkStart > -1 && linkMid > linkStart && linkEnd > linkMid) {
-        if (linkStart > 0) {
-          parts.push(<span key={keyIndex++}>{remaining.slice(0, linkStart)}</span>)
-        }
-
-        const linkText = remaining.slice(linkStart + 1, linkMid)
-        const linkUrl = remaining.slice(linkMid + 2, linkEnd)
-
-        if (linkUrl.startsWith("/")) {
-          parts.push(
-            <button
-              key={keyIndex++}
-              onClick={() => router.push(linkUrl)}
-              className="text-red-600 hover:text-red-700 underline font-medium"
-            >
-              {linkText}
-            </button>,
-          )
-        } else {
-          parts.push(
-            <a
-              key={keyIndex++}
-              href={linkUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-red-600 hover:text-red-700 underline font-medium"
-            >
-              {linkText}
-            </a>,
-          )
-        }
-
-        remaining = remaining.slice(linkEnd + 1)
-      } else if (boldStart > -1 && boldEnd > boldStart) {
-        if (boldStart > 0) {
-          parts.push(<span key={keyIndex++}>{remaining.slice(0, boldStart)}</span>)
-        }
-
-        const boldText = remaining.slice(boldStart + 2, boldEnd)
-        parts.push(
-          <strong key={keyIndex++} className="font-semibold text-gray-900">
-            {boldText}
-          </strong>,
-        )
-
-        remaining = remaining.slice(boldEnd + 2)
-      } else if (listMatch && remaining.indexOf(listMatch[0]) === 0) {
-        parts.push(
-          <div key={keyIndex++} className="flex gap-2 my-1">
-            <span className="text-red-600 font-semibold min-w-[20px]">{listMatch[1]}.</span>
-            <span>{listMatch[2]}</span>
-          </div>,
-        )
-        remaining = remaining.slice(listMatch[0].length).replace(/^\n/, "")
-      } else if (bulletMatch && remaining.indexOf(bulletMatch[0]) === 0) {
-        parts.push(
-          <div key={keyIndex++} className="flex gap-2 my-1">
-            <span className="text-red-600">•</span>
-            <span>{bulletMatch[1]}</span>
-          </div>,
-        )
-        remaining = remaining.slice(bulletMatch[0].length).replace(/^\n/, "")
-      } else {
         const nextSpecial = Math.min(
-          linkStart > -1 ? linkStart : remaining.length,
-          boldStart > -1 ? boldStart : remaining.length,
+          linkStart === -1 ? text.length : linkStart,
+          boldStart === -1 ? text.length : boldStart,
         )
 
-        if (nextSpecial > 0) {
-          parts.push(<span key={keyIndex++}>{remaining.slice(0, nextSpecial)}</span>)
-          remaining = remaining.slice(nextSpecial)
-        } else {
-          parts.push(<span key={keyIndex++}>{remaining}</span>)
-          remaining = ""
+        if (nextSpecial > i) {
+          parts.push(<span key={`${keyBase}-t-${keyIndex++}`}>{text.slice(i, nextSpecial)}</span>)
+          i = nextSpecial
+          continue
         }
+
+        // Bold
+        if (boldStart === i) {
+          const end = text.indexOf("**", i + 2)
+          if (end > i + 2) {
+            const boldText = text.slice(i + 2, end)
+            parts.push(
+              <strong key={`${keyBase}-b-${keyIndex++}`} className="font-semibold text-gray-900">
+                {boldText}
+              </strong>,
+            )
+            i = end + 2
+            continue
+          }
+        }
+
+        // Link
+        if (linkStart === i) {
+          const mid = text.indexOf("](", i)
+          const end = mid > -1 ? text.indexOf(")", mid) : -1
+          if (mid > i && end > mid) {
+            const label = text.slice(i + 1, mid)
+            const url = text.slice(mid + 2, end)
+
+            if (url.startsWith("/")) {
+              parts.push(
+                <button
+                  key={`${keyBase}-l-${keyIndex++}`}
+                  onClick={() => router.push(url)}
+                  className="text-red-600 hover:text-red-700 underline font-medium"
+                >
+                  {label}
+                </button>,
+              )
+            } else {
+              parts.push(
+                <a
+                  key={`${keyBase}-l-${keyIndex++}`}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-600 hover:text-red-700 underline font-medium"
+                >
+                  {label}
+                </a>,
+              )
+            }
+
+            i = end + 1
+            continue
+          }
+        }
+
+        // Fallback: emit current char
+        parts.push(<span key={`${keyBase}-c-${keyIndex++}`}>{text[i]}</span>)
+        i += 1
       }
+
+      return parts
     }
 
-    return parts
+    const lines = content.split("\n")
+    return (
+      <div className="space-y-1 leading-relaxed">
+        {lines.map((line, idx) => {
+          const keyBase = `ln-${idx}`
+          const trimmed = line.trim()
+
+          if (!trimmed) {
+            return <div key={keyBase} className="h-2" />
+          }
+
+          const ordered = trimmed.match(/^(\d+)\.\s+(.+)$/)
+          if (ordered) {
+            return (
+              <div key={keyBase} className="flex gap-2">
+                <span className="text-red-600 font-semibold min-w-[20px]">{ordered[1]}.</span>
+                <span>{renderInline(ordered[2], keyBase)}</span>
+              </div>
+            )
+          }
+
+          const bullet = trimmed.match(/^[•-]\s+(.+)$/)
+          if (bullet) {
+            return (
+              <div key={keyBase} className="flex gap-2">
+                <span className="text-red-600">•</span>
+                <span>{renderInline(bullet[1], keyBase)}</span>
+              </div>
+            )
+          }
+
+          return (
+            <div key={keyBase} className="whitespace-pre-wrap break-words">
+              {renderInline(line, keyBase)}
+            </div>
+          )
+        })}
+      </div>
+    )
   }
 
   return (
@@ -788,13 +820,14 @@ export function FloatingChatWidget() {
                       {message.role === "assistant" && message.tags && message.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1 mt-1.5">
                           {message.tags.map((tag, idx) => (
-                            <Button
+                            <button
                               key={idx}
                               onClick={() => sendMessage(tag)}
-                              className="px-2 py-0.5 text-xs bg-white border border-gray-300 rounded-full hover:border-red-500 hover:text-red-600 transition-colors"
+                              type="button"
+                              className="px-2 py-0.5 text-xs bg-white text-gray-700 border border-gray-300 rounded-full hover:border-red-500 hover:text-red-600 transition-colors"
                             >
                               {tag}
-                            </Button>
+                            </button>
                           ))}
                         </div>
                       )}
