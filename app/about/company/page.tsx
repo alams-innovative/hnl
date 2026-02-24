@@ -113,7 +113,7 @@ export default function CompanyPage() {
       description:
         "End-to-end operations, maintenance, and support services for telecom and enterprise infrastructure.",
       icon: Shield,
-      image: "https://images.unsplash.com/photo-1581092918056-c627a92ad1ab?w=400&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=400&h=300&fit=crop",
     },
   ]
 
@@ -154,7 +154,7 @@ export default function CompanyPage() {
       title: "Partnership Mindset",
       text: "Long-term relationships over transactions",
       icon: Handshake,
-      image: "https://images.unsplash.com/photo-1521791136064-7986c292021c?w=400&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop",
     },
     {
       title: "Technical Strength",
@@ -693,8 +693,8 @@ export default function CompanyPage() {
             <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-red-600 hover:shadow-lg transition-all">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-                  alt="UK"
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg"
+                  alt="China"
                   className="w-16 h-10 shadow-md"
                 />
                 <span className="text-4xl">🤝</span>

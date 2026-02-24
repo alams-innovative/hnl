@@ -303,7 +303,7 @@ export default function CareersPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="https://www.linkedin.com/company/hnl-pakistan"
+                  href="https://www.linkedin.com/company/hitech-networks-private-limited/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#0077B5] text-white px-6 py-3 rounded-lg hover:bg-[#006699] transition-colors"

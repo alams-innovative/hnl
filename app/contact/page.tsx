@@ -268,7 +268,7 @@ export default function ContactPage() {
 
               <div className="rounded-2xl overflow-hidden shadow-xl h-[500px] border-4 border-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.7899999999995!2d74.3587!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMxJzEzLjQiTiA3NMKwMjEnMzEuMyJF!5e0!3m2!1sen!2s!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.0!2d74.3587!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919053a42e78d6d%3A0x1!2sCommercial+Arcade%2C+Divine+Gardens%2C+New+Airport+Road%2C+Lahore!5e0!3m2!1sen!2s!4v1700000000000"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -277,6 +277,14 @@ export default function ContactPage() {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="HNL Head Office Location"
                 />
+                <a
+                  href="https://maps.app.goo.gl/gYkwvV2F9igtpwvf8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center py-2 bg-gray-100 text-sm text-gray-600 hover:text-red-600 transition-colors"
+                >
+                  Open in Google Maps
+                </a>
               </div>
             </div>
           </div>
@@ -306,13 +314,12 @@ export default function ContactPage() {
             <div className="mt-10 text-center">
               <p className="text-gray-600 mb-4">Don't see your city? We can still help you.</p>
               <a
-                href={getWhatsAppLink({ action: "Meeting", page: "Contact Page", section: "City Support" })}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-              >
-                Contact Us for Your Location
-              </a>
+                  href="tel:+924211100845"
+                  className="inline-flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  <Phone className="h-5 w-5" />
+                  Call: +92-42-111-000-845
+                </a>
             </div>
           </div>
         </section>

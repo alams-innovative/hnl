@@ -245,9 +245,9 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="flex flex-wrap gap-6 justify-center text-sm">
-              <a href="tel:+924235761999" className="flex items-center gap-2 hover:text-red-500 transition-colors">
+              <a href="tel:+924211100845" className="flex items-center gap-2 hover:text-red-500 transition-colors">
                 <Phone className="h-4 w-4 text-red-500" />
-                +92 42 3576 1999
+                +92-42-111-000-845
               </a>
               <a href="mailto:info@hnl.com.pk" className="flex items-center gap-2 hover:text-red-500 transition-colors">
                 <Mail className="h-4 w-4 text-red-500" />
@@ -262,19 +262,25 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex gap-4 justify-center md:justify-end">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/hitech-networks-private-limited/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-9 w-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/share/18Mu2qiqui/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-9 w-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors"
               >
                 <Facebook className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/hitech_networks_limited?igsh=N2V6MTkzNWIzbG9n&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-9 w-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors"
               >
                 <Twitter className="h-4 w-4" />
