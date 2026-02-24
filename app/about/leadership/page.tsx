@@ -51,32 +51,38 @@ const boardOfDirectors = [
 
 const cLevel = [
   {
-    name: "Inamullah Khan",
-    position: "Chief Technology Officer (CTO)",
-    image: "/images/inamullah-20khan-hnl.jpeg",
-    linkedin: "https://www.linkedin.com/in/inamullah-khan-a4240214/",
-  },
-  {
-    name: "Babar Waseem",
-    position: "Chief Financial Officer (CFO)",
-    image: "/images/babar-20waseem-hnl.jpeg",
-    linkedin: "https://www.linkedin.com/in/babar-waseem-4b2391264",
+    name: "Waqar Asghar",
+    position: "Chief Operating Officer",
+    image: "/images/user-placeholder.svg",
+    linkedin: "",
   },
   {
     name: "Khalil Ahmad",
-    position: "Chief Coordinating Officer (CCO)",
+    position: "Chief Coordinator Officer",
     image: "/images/khalil-20ahmad-hnl.jpeg",
     linkedin: "https://www.linkedin.com/in/khalil-ahmad-b898b9117",
   },
   {
     name: "Mian Jahanzeb Naveed",
-    position: "Chief Business Officer (CBO)",
+    position: "Chief Technology Officer",
     image: "/images/jahanzeb-20naveed-hnl.jpeg",
     linkedin: "https://www.linkedin.com/in/jahanzeb-naveed/",
   },
   {
-    name: "TBA",
-    position: "Chief Operating Officer (COO)",
+    name: "Wajid Akbar",
+    position: "Chief Business Officer",
+    image: "/images/wajid-akbar-hnl.jpeg",
+    linkedin: "https://www.linkedin.com/in/wajid-akbar-b2b99b18/",
+  },
+  {
+    name: "Asad Islam",
+    position: "Chief Financial Officer",
+    image: "/images/asad-20islam-hnl.jpeg",
+    linkedin: "https://www.linkedin.com/in/asad-islam-aca-fcca-b70b5046/",
+  },
+  {
+    name: "Imran Zahoor",
+    position: "Chief Financial Officer",
     image: "/images/user-placeholder.svg",
     linkedin: "",
   },
@@ -85,13 +91,13 @@ const cLevel = [
 const directors = [
   {
     name: "Syed Shahzad Ali",
-    position: "Director Sales and Marketing",
+    position: "Director Sales",
     image: "/images/syed-shahzad-ali-hnl.jpeg",
     linkedin: "https://www.linkedin.com/in/syed-shahzadali",
   },
   {
     name: "Mohsin Ali",
-    position: "Head of HR & Admin",
+    position: "Head of Admin & HR",
     image: "/images/user-placeholder.svg",
     linkedin: "",
   },
@@ -102,25 +108,37 @@ const directors = [
     linkedin: "https://www.linkedin.com/in/shahzad-ally-374594343",
   },
   {
-    name: "Saeed Ahmad Mayo",
-    position: "Head of Overhauling",
+    name: "Saeed Ahmed Mayo",
+    position: "Head of OverHauling",
     image: "/images/saeed-20ahmed-hnl.jpeg",
     linkedin: "https://www.linkedin.com/in/saeed-ahmed-5b63459b",
+  },
+  {
+    name: "Syed Zain Tirmazi",
+    position: "Head of Nokia Project",
+    image: "/images/syed-zain-tirmazi-hnl.jpeg",
+    linkedin: "https://www.linkedin.com/in/syed-zain-tirmazi-5805b415/",
+  },
+  {
+    name: "Mirza Amin Baig",
+    position: "Head of Information Technology",
+    image: "/images/user-placeholder.svg",
+    linkedin: "",
   },
 ]
 
 const seniorManagers = [
   {
-    name: "Ejaz Ahmed",
-    position: "Senior Manager Bidding and Contracts",
-    image: "/images/user-placeholder.svg",
-    linkedin: "",
+    name: "Babar Waseem",
+    position: "Senior Manager Supply Chain",
+    image: "/images/babar-20waseem-hnl.jpeg",
+    linkedin: "https://www.linkedin.com/in/babar-waseem-4b2391264",
   },
   {
-    name: "Asad Islam",
-    position: "Senior Manager Production",
-    image: "/images/asad-20islam-hnl.jpeg",
-    linkedin: "https://www.linkedin.com/in/asad-islam-aca-fcca-b70b5046/",
+    name: "Ejaz Ahmed",
+    position: "Senior Manager Business Strategy",
+    image: "/images/user-placeholder.svg",
+    linkedin: "",
   },
   {
     name: "Babar Zafar",
@@ -142,60 +160,78 @@ const seniorManagers = [
   },
   {
     name: "Tahseen Iqbal",
-    position: "Senior Manager Ops Excellence",
+    position: "Senior Manager OPS Excellence",
     image: "/images/tahseen-iqbal-hnl.jpeg",
     linkedin: "https://www.linkedin.com/in/tahseen-iqbal-b98a9a35",
   },
   {
-    name: "Wajid Akbar",
-    position: "Senior Manager Fiber/HFC",
-    image: "/images/wajid-akbar-hnl.jpeg",
-    linkedin: "https://www.linkedin.com/in/wajid-akbar-b2b99b18/",
+    name: "Ali Mujhtaba",
+    position: "Sr. Manager Power Product Solutions",
+    image: "/images/user-placeholder.svg",
+    linkedin: "",
+  },
+  {
+    name: "Athar Kabir",
+    position: "General Manager Sales",
+    image: "/images/user-placeholder.svg",
+    linkedin: "",
+  },
+  {
+    name: "Amir Shehzad",
+    position: "Regional Manager Accounts",
+    image: "/images/user-placeholder.svg",
+    linkedin: "",
+  },
+  {
+    name: "Muhammad Irfan",
+    position: "Regional Manager",
+    image: "/images/user-placeholder.svg",
+    linkedin: "",
+  },
+  {
+    name: "Rana Abdul Waheed",
+    position: "Senior Manager Services Support",
+    image: "/images/user-placeholder.svg",
+    linkedin: "",
   },
 ]
 
 const projectManagers = [
   {
-    name: "Syed Zain Tirmazi",
-    position: "Head Of Nokia Project",
-    image: "/images/syed-zain-tirmazi-hnl.jpeg",
-    linkedin: "https://www.linkedin.com/in/syed-zain-tirmazi-5805b415/",
+    name: "Inamullah Khan",
+    position: "Project Manager",
+    image: "/images/inamullah-20khan-hnl.jpeg",
+    linkedin: "https://www.linkedin.com/in/inamullah-khan-a4240214/",
   },
   {
     name: "Muhammad Tahir Jamil",
-    position: "Project Manager Operations - North Region Jazz",
+    position: "Project Manager",
     image: "/images/muhammad-20tahir-20jamil-hnl.jpeg",
     linkedin: "https://www.linkedin.com/in/muhammad-tahir-jamil-97a5421b7/",
   },
   {
     name: "Muhammad Ashfaq",
-    position: "Project Manager Operations - South Region Jazz",
+    position: "Project Manager",
     image: "/images/user-placeholder.svg",
     linkedin: "",
   },
   {
     name: "Prince Muhammad Aftab Saeed",
-    position: "Project Manager Operations - Central Region Jazz",
+    position: "Project Manager",
     image: "/images/prince-20muhammad-20aftab-20saeed-hnl.jpeg",
     linkedin: "https://www.linkedin.com/in/prince-muhammad-aftab-saeed-7aabb623",
   },
   {
-    name: "Tariq Mahmood",
-    position: "Project Manager Operations - South Region Telenor",
+    name: "Tariq Mehmood",
+    position: "Project Manager",
     image: "/images/user-placeholder.svg",
     linkedin: "",
   },
   {
     name: "Mian Nadeem Shafqat",
-    position: "Project Manager Operations - Central Region Telenor",
+    position: "Project Manager",
     image: "/images/mian-20nadeem-20shafqat-hnl.jpeg",
     linkedin: "https://www.linkedin.com/in/mian-nadeem-shafqat-0083a867",
-  },
-  {
-    name: "Inamullah Khan",
-    position: "Project Manager Operations - North Region Telenor",
-    image: "/images/user-placeholder.svg",
-    linkedin: "https://www.linkedin.com/in/inamullah-khan-a4240214/",
   },
 ]
 
@@ -248,12 +284,12 @@ export default function LeadershipPage() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div className="relative">
-                <div className="aspect-[4/5] relative rounded-lg overflow-hidden shadow-2xl">
+                <div className="aspect-[3/4] relative rounded-lg overflow-hidden shadow-2xl">
                   <Image
                     src={founderCEO.image || "/placeholder.svg"}
                     alt={founderCEO.name}
                     fill
-                    className="object-cover"
+                    className="object-contain bg-gray-100"
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-red-600 rounded-lg -z-10" />

@@ -18,25 +18,25 @@ export default function LocationsPage() {
       hours: "Mon-Fri: 9 AM - 6 PM, Sat: 10 AM - 4 PM",
       mapUrl: "https://maps.app.goo.gl/11XV23YjRDYQ9ph78",
       mapEmbed:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.7899999999995!2d74.3587!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMxJzEzLjQiTiA3NMKwMjEnMzEuMyJF!5e0!3m2!1sen!2s!4v1234567890",
+        "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d809.4778511366932!2d74.4140519!3d31.5021748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190f32dd8345eb%3A0xa5223bde7773a1f2!2sHitech%20Networks%20Private%20Limited!5e1!3m2!1sen!2s!4v1771960161932!5m2!1sen!2s",
     },
     {
       city: "Islamabad",
       type: "Regional Office",
       address: "Plot 23, Street 9, I-9/3, Islamabad",
-      phone: "(+92-51) 111-000-845",
+      phone: "(+92-42) 111-000-845",
       email: "islamabad@hnl.com.pk",
       hours: "Mon-Fri: 9 AM - 6 PM",
-      mapUrl: "#",
+      mapUrl: "https://maps.app.goo.gl/gYkwvV2F9igtpwvf8",
     },
     {
       city: "Karachi",
       type: "Regional Office",
-      address: "Block 4, Clifton, Karachi",
-      phone: "(+92-21) 111-000-845",
+      address: "Plot No A-36, Block No.1, K.D.A. Scheme No.24, Gulshan-e-Iqbal, Karachi",
+      phone: "(+92-42) 111-000-845",
       email: "karachi@hnl.com.pk",
       hours: "Mon-Fri: 9 AM - 6 PM",
-      mapUrl: "#",
+      mapUrl: "https://maps.app.goo.gl/m2g94ETGC6zWBRWA9",
     },
   ]
 

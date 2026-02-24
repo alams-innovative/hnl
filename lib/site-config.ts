@@ -166,11 +166,11 @@ export const siteConfig = {
 
   // Social Media Links
   social: {
-    linkedin: "https://www.linkedin.com/company/hnl-pakistan",
-    facebook: "https://www.facebook.com/hnlpakistan",
+    linkedin: "https://www.linkedin.com/company/hitech-networks-private-limited/",
+    facebook: "https://www.facebook.com/share/18Mu2qiqui/?mibextid=wwXIfr",
     twitter: "https://twitter.com/HNLPakistan",
     youtube: "https://www.youtube.com/@HNLPakistan",
-    instagram: "https://www.instagram.com/hnlpakistan",
+    instagram: "https://www.instagram.com/hitech_networks_limited?igsh=N2V6MTkzNWIzbG9n&utm_source=qr",
   },
 
   // Website URLs
