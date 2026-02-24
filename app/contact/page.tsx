@@ -268,7 +268,7 @@ export default function ContactPage() {
 
               <div className="rounded-2xl overflow-hidden shadow-xl h-[500px] border-4 border-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.0!2d74.3587!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919053a42e78d6d%3A0x1!2sCommercial+Arcade%2C+Divine+Gardens%2C+New+Airport+Road%2C+Lahore!5e0!3m2!1sen!2s!4v1700000000000"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d809.4778511366932!2d74.4140519!3d31.5021748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190f32dd8345eb%3A0xa5223bde7773a1f2!2sHitech%20Networks%20Private%20Limited!5e1!3m2!1sen!2s!4v1771960161932!5m2!1sen!2s"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
