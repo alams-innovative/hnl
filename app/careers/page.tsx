@@ -15,6 +15,7 @@ import {
   TrendingUp,
   Linkedin,
   ExternalLink,
+  Mail,
 } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { Button } from "@/components/ui/button"
@@ -207,11 +208,31 @@ export default function CareersPage() {
                   </div>
                 </div>
                 <div className="mt-8 pt-6 border-t">
-                  <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
+                    <p className="text-sm text-blue-900 font-medium mb-3">
+                      For career inquiries, you can also reach us at:
+                    </p>
+                    <div className="flex flex-wrap gap-4">
+                      <a
+                        href="mailto:Jobs@hnl.com.pk"
+                        className="inline-flex items-center gap-2 text-sm text-blue-700 hover:text-blue-900 font-medium"
+                      >
+                        <Mail className="h-4 w-4" />
+                        Jobs@hnl.com.pk
+                      </a>
+                      <a
+                        href="mailto:hrconnect@hnl.com.pk"
+                        className="inline-flex items-center gap-2 text-sm text-blue-700 hover:text-blue-900 font-medium"
+                      >
+                        <Mail className="h-4 w-4" />
+                        hrconnect@hnl.com.pk
+                      </a>
+                    </div>
+                  </div>
+                  <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-3">
                     <p className="text-sm text-amber-800">
-                      <strong>Note:</strong> We do not accept applications via email or WhatsApp. All applications must
-                      be submitted through our official form to ensure proper evaluation. We occasionally post specific
-                      roles on LinkedIn and Indeed.
+                      <strong>Note:</strong> We recommend submitting your application through our official form below for
+                      the fastest evaluation. We occasionally post specific roles on LinkedIn and Indeed.
                     </p>
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { sql } from "@/lib/db"
 import { verifyCaptcha } from "@/lib/captcha"
+import { sendCareerNotificationEmail } from "@/lib/email"
 
 export async function POST(request: NextRequest) {
   try {
@@ -33,9 +34,28 @@ export async function POST(request: NextRequest) {
       ) RETURNING id
     `
 
+    const applicationId = result[0].id
+
+    // Send email notification (non-blocking - don't fail submission if email fails)
+    sendCareerNotificationEmail({
+      applicationId: String(applicationId),
+      applicantName: formData.fullName,
+      applicantEmail: formData.email,
+      applicantPhone: formData.phone,
+      positionTitle: formData.positionTitle,
+      positionLayer: formData.positionLayer,
+      currentCompany: formData.currentCompany,
+      currentRole: formData.currentRole,
+      yearsOfExperience: formData.yearsOfExperience,
+      city: formData.currentLocation,
+      linkedinUrl: formData.linkedinUrl,
+      cvFileName: formData.cvFileName,
+      motivation: formData.motivation,
+    }).catch((err) => console.error("[v0] Career email send failed:", err))
+
     return NextResponse.json({
       success: true,
-      id: result[0].id,
+      id: applicationId,
       message: "Career application submitted successfully",
     })
   } catch (error) {

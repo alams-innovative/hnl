@@ -1,6 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { sql } from "@/lib/db"
 import { verifyCaptcha } from "@/lib/captcha"
+import { sendInternshipNotificationEmail } from "@/lib/email"
 
 export async function POST(request: NextRequest) {
   try {
@@ -28,9 +29,28 @@ export async function POST(request: NextRequest) {
       ) RETURNING id
     `
 
+    const applicationId = result[0].id
+
+    // Send email notification (non-blocking - don't fail submission if email fails)
+    sendInternshipNotificationEmail({
+      applicationId: String(applicationId),
+      applicantName: formData.fullName,
+      applicantEmail: formData.email,
+      applicantPhone: formData.phone,
+      track: formData.track,
+      university: formData.institution,
+      fieldOfStudy: formData.fieldOfStudy,
+      educationLevel: formData.educationLevel,
+      city: formData.city,
+      linkedinUrl: formData.linkedinUrl,
+      cvFileName: formData.cvFileName,
+      whyHnl: formData.whyHnl,
+      availabilityQuarter: formData.availabilityQuarter,
+    }).catch((err) => console.error("[v0] Internship email send failed:", err))
+
     return NextResponse.json({
       success: true,
-      id: result[0].id,
+      id: applicationId,
       message: "Internship application submitted successfully",
     })
   } catch (error) {
