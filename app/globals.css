@@ -1,6 +1,25 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Critical CSS for FCP optimization */
+@layer base {
+  /* Prevent FOIT (Flash of Invisible Text) */
+  html {
+    font-display: swap;
+  }
+  
+  /* Reduce layout shift by pre-sizing images */
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Hardware acceleration for smooth animations */
+  .animate-scroll, .animate-scroll-reverse {
+    will-change: transform;
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -251,7 +270,7 @@ section {
 }
 
 .animate-scroll {
-  animation: scroll 60s linear infinite;
+  animation: scroll 45s linear infinite;
 }
 
 .animate-scroll:hover {
@@ -259,11 +278,19 @@ section {
 }
 
 .animate-scroll-reverse {
-  animation: scroll-reverse 60s linear infinite;
+  animation: scroll-reverse 45s linear infinite;
 }
 
 .animate-scroll-reverse:hover {
   animation-play-state: paused;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll,
+  .animate-scroll-reverse {
+    animation: none;
+  }
 }
 
 ::-webkit-scrollbar {

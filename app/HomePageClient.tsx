@@ -2,11 +2,12 @@
 
 import type { generateOrganizationSchema, generateFAQSchema } from "@/lib/seo"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Zap, Cloud, Phone, Star } from "lucide-react"
 import DivisionCard from "@/components/division-card"
 import ArticleCard from "@/components/article-card"
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 
 interface HomePageClientProps {
   jsonLd: ReturnType<typeof generateOrganizationSchema>
@@ -22,28 +23,41 @@ interface HomePageClientProps {
 }
 
 export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testimonials }: HomePageClientProps) {
-  const [currentSlide, setCurrentSlide] = React.useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [videoLoaded, setVideoLoaded] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const totalSlides = Math.ceil(testimonials.length / 3)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides)
     }, 4000)
     return () => clearInterval(timer)
   }, [totalSlides])
 
+  // Lazy load video after initial paint
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.src = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero_hnl_banner_video-1bNfAa2Gg5y42EFMOkUsennaJHJiaB.mp4"
+        videoRef.current.load()
+      }
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
+
   const goToSlide = (index: number) => {
     setCurrentSlide(index)
   }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen" id="main-content">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }} />
 
       {/* 1. HERO BANNER */}
-      <section className="relative bg-white py-8 md:py-12 lg:py-16 overflow-hidden">
+      <section className="relative bg-white py-8 md:py-12 lg:py-16 overflow-hidden" aria-labelledby="hero-heading">
         <div className="container px-4 md:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
             <div className="space-y-6 md:space-y-8">
@@ -52,7 +66,7 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
                 <span className="text-sm font-medium text-green-700">AGG Power Authorized Distributor</span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
+              <h1 id="hero-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
                 Infrastructure Solutions
                 <span className="block mt-2 text-red-600">Built for Pakistan</span>
               </h1>
@@ -84,14 +98,25 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
             </div>
 
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden bg-white">
+              <div className="relative rounded-2xl overflow-hidden bg-gray-100 aspect-video">
+                {/* Poster image for LCP - shows immediately */}
+                <Image
+                  src="/images/hero-poster.jpg"
+                  alt="HNL Infrastructure Solutions - Enterprise telecom, energy, and IT solutions for Pakistan"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className={`object-cover transition-opacity duration-300 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}
+                />
+                {/* Video loads after initial paint */}
                 <video
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero_hnl_banner_video-1bNfAa2Gg5y42EFMOkUsennaJHJiaB.mp4"
+                  ref={videoRef}
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-auto"
+                  onLoadedData={() => setVideoLoaded(true)}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
               </div>
             </div>
@@ -100,11 +125,11 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
       </section>
 
       {/* 2. SUSTAINABILITY SECTION */}
-      <section className="py-20 md:py-32 overflow-hidden bg-gradient-to-b from-white via-green-50 to-white">
+      <section className="py-20 md:py-32 overflow-hidden bg-gradient-to-b from-white via-green-50 to-white" aria-labelledby="sustainability-heading">
         <div className="container px-4 md:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
             <div className="space-y-8 px-4 md:px-0">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight text-balance">
+              <h2 id="sustainability-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight text-balance">
                 Clean Energy, Brighter Tomorrow
               </h2>
 
@@ -203,10 +228,13 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
 
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] md:h-[500px] lg:h-[600px]">
-                <img
+                <Image
                   src="/images/hunza-20and-20skardu.jpg"
                   alt="Clean Energy for Pakistan - Scenic Mountain Landscape Hunza Valley"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -215,10 +243,10 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
       </section>
 
       {/* 3. WHAT WE DO */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white" aria-labelledby="services-heading">
         <div className="container px-4 md:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-balance">What We Do</h2>
+            <h2 id="services-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-balance">What We Do</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance leading-relaxed">
               Comprehensive infrastructure and technology solutions for Pakistan's most demanding projects
             </p>
@@ -271,13 +299,13 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
       </section>
 
       {/* 4. COMPANIES WE DEAL WITH */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" aria-labelledby="clients-heading">
         <div className="container px-4 md:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-block px-4 py-2 bg-gray-100 rounded-full mb-4">
               <span className="text-sm font-medium text-gray-600">Clients</span>
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+            <h2 id="clients-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
               Companies We Deal With
             </h2>
           </div>
@@ -306,10 +334,13 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
                         key={`${setIndex}-${idx}`}
                         className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-red-600 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-w-[180px] h-[120px] shrink-0"
                       >
-                        <img
-                          src={client.logo || "/placeholder.svg"}
+                        <Image
+                          src={client.logo}
                           alt={client.name}
+                          width={120}
+                          height={60}
                           className="max-w-full max-h-full object-contain"
+                          loading="lazy"
                         />
                       </div>
                     ))}
@@ -340,10 +371,13 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
                         key={`${setIndex}-${idx}`}
                         className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-red-600 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-w-[180px] h-[120px] shrink-0"
                       >
-                        <img
-                          src={client.logo || "/placeholder.svg"}
+                        <Image
+                          src={client.logo}
                           alt={client.name}
+                          width={120}
+                          height={60}
                           className="max-w-full max-h-full object-contain"
+                          loading="lazy"
                         />
                       </div>
                     ))}
@@ -490,10 +524,10 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
       </section>
 
       {/* 7. TESTIMONIALS */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50" aria-labelledby="testimonials-heading" role="region">
         <div className="container px-4 md:px-6 lg:px-8">
           <div className="text-center mb-16 max-w-7xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-balance">Testimonials</h2>
+            <h2 id="testimonials-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-balance">Testimonials</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto text-balance leading-relaxed">What Our Clients Say</p>
             <p className="text-base text-gray-500 mt-4 max-w-2xl mx-auto">
               Don't just take our word for it. Here's what our valued clients from various industries have to say about
@@ -582,10 +616,13 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/bustling-energy-technology-exhibition-in-dubai-wit.jpg"
                   alt="Pakistan Energy Conference"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                   March 2026
@@ -630,10 +667,13 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
 
             <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/futuristic-technology-exhibition-in-beijing-with-c.jpg"
                   alt="ITCN Asia 2026"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                   September 2026
@@ -678,10 +718,13 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
 
             <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src="/green-energy-sustainability-exhibition-in-islamaba.jpg"
                   alt="ISEM Pakistan Solar Energy Exhibition 2026"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                   November 2026

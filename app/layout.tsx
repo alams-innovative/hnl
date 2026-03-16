@@ -14,9 +14,10 @@ import { SiteChromeConditional } from "@/components/site-chrome-conditional"
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
 })
 
 export const metadata: Metadata = {
@@ -178,10 +179,20 @@ export default function RootLayout({
         {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
+
+        {/* Preload LCP image for fast initial paint */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-poster.jpg"
+          fetchPriority="high"
+        />
 
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//hebbkx1anhila5yf.public.blob.vercel-storage.com" />
 
         {/* Organization Schema */}
         <script
