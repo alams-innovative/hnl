@@ -25,6 +25,7 @@ import {
   ArrowRight,
 } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const steps = [
   { id: 1, title: "Company Info", icon: Building2 },
@@ -751,10 +752,10 @@ export function PartnershipInquiryForm() {
               Trusted by global leaders for infrastructure partnerships in Pakistan
             </p>
             <div className="flex items-center justify-center gap-8 opacity-50">
-              <img src="/images/1.png" alt="Partner" className="h-8 object-contain grayscale" />
-              <img src="/images/2.png" alt="Partner" className="h-8 object-contain grayscale" />
-              <img src="/images/3.png" alt="Partner" className="h-8 object-contain grayscale" />
-              <img src="/images/4.png" alt="Partner" className="h-8 object-contain grayscale" />
+              <Image src="/images/1.png" alt="Jazz - HNL Partner" width={80} height={32} className="h-8 w-auto object-contain grayscale" />
+              <Image src="/images/2.png" alt="Telenor - HNL Partner" width={80} height={32} className="h-8 w-auto object-contain grayscale" />
+              <Image src="/images/3.png" alt="Zong 4G - HNL Partner" width={80} height={32} className="h-8 w-auto object-contain grayscale" />
+              <Image src="/images/4.png" alt="Ufone - HNL Partner" width={80} height={32} className="h-8 w-auto object-contain grayscale" />
             </div>
           </div>
         </div>

@@ -28,6 +28,27 @@ export async function verifyCaptcha(token: string): Promise<boolean> {
   }
 }
 
+// Load captcha script on demand
+async function loadCaptchaScriptIfNeeded(): Promise<void> {
+  if (typeof window === "undefined") return
+  
+  // Check if already loaded
+  if (window.grecaptcha && window.grecaptcha.ready) {
+    return
+  }
+
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+  
+  return new Promise((resolve) => {
+    const script = document.createElement("script")
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`
+    script.async = true
+    script.onload = () => resolve()
+    script.onerror = () => resolve() // Resolve anyway to not block
+    document.head.appendChild(script)
+  })
+}
+
 export async function getCaptchaToken(): Promise<string | null> {
   // Check if running in browser
   if (typeof window === "undefined") {
@@ -42,13 +63,16 @@ export async function getCaptchaToken(): Promise<string | null> {
   }
 
   try {
+    // Load script on demand
+    await loadCaptchaScriptIfNeeded()
+    
     // Wait for grecaptcha to be ready
     await new Promise<void>((resolve) => {
       if (window.grecaptcha && window.grecaptcha.ready) {
         window.grecaptcha.ready(() => resolve())
       } else {
-        // If grecaptcha not loaded, resolve anyway
-        resolve()
+        // If grecaptcha not loaded, resolve anyway after timeout
+        setTimeout(resolve, 1000)
       }
     })
 

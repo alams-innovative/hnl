@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Zap, Award, Shield, Gauge, ArrowRight, Download } from "lucide-react"
 import Breadcrumbs from "@/components/breadcrumbs"
 
@@ -96,7 +97,7 @@ export default function GeneratorsPage() {
               </div>
             </div>
             <div className="lg:w-1/3">
-              <img src="/images/image.png" alt="AGG Power Diesel Generator" className="rounded-2xl shadow-2xl" />
+              <Image src="/images/image.png" alt="AGG Power Diesel Generator" width={400} height={400} className="rounded-2xl shadow-2xl" />
             </div>
           </div>
         </div>
