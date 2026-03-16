@@ -98,7 +98,7 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
             </div>
 
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden bg-gray-100 aspect-video">
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-50 min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center">
                 {/* Poster image for LCP - shows immediately */}
                 <Image
                   src="/images/hero-poster.jpg"
@@ -106,7 +106,7 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className={`object-cover transition-opacity duration-300 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}
+                  className={`object-contain transition-opacity duration-300 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}
                 />
                 {/* Video loads after initial paint */}
                 <video
@@ -116,7 +116,7 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
                   muted
                   playsInline
                   onLoadedData={() => setVideoLoaded(true)}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+                  className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
               </div>
             </div>
