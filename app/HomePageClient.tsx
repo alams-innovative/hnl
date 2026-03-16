@@ -35,15 +35,32 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
     return () => clearInterval(timer)
   }, [totalSlides])
 
-  // Lazy load video after initial paint
+  // Lazy load video only when visible and after initial paint (for better LCP)
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.src = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero_hnl_banner_video-1bNfAa2Gg5y42EFMOkUsennaJHJiaB.mp4"
-        videoRef.current.load()
-      }
-    }, 100)
-    return () => clearTimeout(timer)
+    const video = videoRef.current
+    if (!video) return
+
+    // Use IntersectionObserver to only load video when it's visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Delay video load to prioritize LCP
+            setTimeout(() => {
+              if (video) {
+                video.src = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero_hnl_banner_video-1bNfAa2Gg5y42EFMOkUsennaJHJiaB.mp4"
+                video.load()
+              }
+            }, 1500) // Wait 1.5s after visible to let LCP complete
+            observer.disconnect()
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    observer.observe(video)
+    return () => observer.disconnect()
   }, [])
 
   const goToSlide = (index: number) => {
@@ -92,7 +109,7 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
                   variant="outline"
                   className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 bg-transparent"
                 >
-                  <Link href="/about">Learn More</Link>
+                  <Link href="/about" aria-label="Learn more about HNL's infrastructure solutions">Learn More About HNL</Link>
                 </Button>
               </div>
             </div>
@@ -108,13 +125,14 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className={`object-contain transition-opacity duration-300 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}
                 />
-                {/* Video loads after initial paint */}
+                {/* Video loads after initial paint - preload="none" prevents early fetch */}
                 <video
                   ref={videoRef}
                   autoPlay
                   loop
                   muted
                   playsInline
+                  preload="none"
                   onLoadedData={() => setVideoLoaded(true)}
                   className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
@@ -408,18 +426,18 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
             {/* Row 1 - Large + Medium + Small */}
             <div className="grid grid-cols-12 gap-4 mb-4">
               {/* Large black box */}
-              <div className="col-span-12 md:col-span-5 bg-black rounded-2xl p-6 flex flex-col justify-center items-center min-h-[180px]">
-                <svg className="w-8 h-8 text-red-600 mb-2" fill="currentColor" viewBox="0 0 24 24">
+              <div className="col-span-12 md:col-span-5 bg-gray-900 rounded-2xl p-6 flex flex-col justify-center items-center min-h-[180px]">
+                <svg className="w-8 h-8 text-red-500 mb-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                 </svg>
                 <div className="text-3xl font-bold text-white">#1</div>
-                <div className="text-sm text-white/80 mt-1">MS Provider in Pakistan</div>
+                <div className="text-sm text-gray-300 mt-1">MS Provider in Pakistan</div>
               </div>
 
               {/* Medium red box */}
-              <div className="col-span-6 md:col-span-4 bg-red-600 rounded-2xl p-5 flex flex-col justify-center items-center min-h-[180px]">
+              <div className="col-span-6 md:col-span-4 bg-red-700 rounded-2xl p-5 flex flex-col justify-center items-center min-h-[180px]">
                 <div className="text-2xl font-bold text-white">16,870+</div>
-                <div className="text-xs text-white/80 mt-1 text-center">BTS Sites Managed</div>
+                <div className="text-sm text-red-100 mt-1 text-center">BTS Sites Managed</div>
               </div>
 
               {/* Small white box */}
@@ -432,15 +450,15 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
             {/* Row 2 - Small + Medium + Large */}
             <div className="grid grid-cols-12 gap-4 mb-4">
               {/* Small black box */}
-              <div className="col-span-6 md:col-span-3 bg-black rounded-2xl p-4 flex flex-col justify-center items-center min-h-[160px]">
-                <div className="text-xl font-bold text-red-600">23,215</div>
-                <div className="text-xs text-white/80 mt-1 text-center">Sites FLM/MS</div>
+              <div className="col-span-6 md:col-span-3 bg-gray-900 rounded-2xl p-4 flex flex-col justify-center items-center min-h-[160px]">
+                <div className="text-xl font-bold text-red-500">23,215</div>
+                <div className="text-sm text-gray-300 mt-1 text-center">Sites FLM/MS</div>
               </div>
 
               {/* Medium red box */}
-              <div className="col-span-6 md:col-span-4 bg-red-600 rounded-2xl p-5 flex flex-col justify-center items-center min-h-[160px]">
+              <div className="col-span-6 md:col-span-4 bg-red-700 rounded-2xl p-5 flex flex-col justify-center items-center min-h-[160px]">
                 <div className="text-2xl font-bold text-white">980+</div>
-                <div className="text-xs text-white/80 mt-1 text-center">Field Technicians</div>
+                <div className="text-sm text-red-100 mt-1 text-center">Field Technicians</div>
               </div>
 
               {/* Large white box */}
@@ -453,15 +471,15 @@ export default function HomePageClient({ jsonLd, faqJsonLd, reviewsSchema, testi
             {/* Row 3 - Medium + Small + "Many more" */}
             <div className="grid grid-cols-12 gap-4">
               {/* Medium black box */}
-              <div className="col-span-6 md:col-span-4 bg-black rounded-2xl p-5 flex flex-col justify-center items-center min-h-[140px]">
-                <div className="text-xl font-bold text-red-600">10,921</div>
-                <div className="text-xs text-white/80 mt-1 text-center">DG Overhauls</div>
+              <div className="col-span-6 md:col-span-4 bg-gray-900 rounded-2xl p-5 flex flex-col justify-center items-center min-h-[140px]">
+                <div className="text-xl font-bold text-red-500">10,921</div>
+                <div className="text-sm text-gray-300 mt-1 text-center">DG Overhauls</div>
               </div>
 
               {/* Small red box */}
-              <div className="col-span-6 md:col-span-3 bg-red-600 rounded-2xl p-4 flex flex-col justify-center items-center min-h-[140px]">
+              <div className="col-span-6 md:col-span-3 bg-red-700 rounded-2xl p-4 flex flex-col justify-center items-center min-h-[140px]">
                 <div className="text-xl font-bold text-white">410+</div>
-                <div className="text-xs text-white/80 mt-1 text-center">Technical Experts</div>
+                <div className="text-sm text-red-100 mt-1 text-center">Technical Experts</div>
               </div>
 
               {/* Small white box */}

@@ -379,9 +379,10 @@ export default function LeadershipPage() {
                       href={director.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Connect with ${director.name} on LinkedIn`}
                       className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-600 hover:bg-red-600 hover:text-white transition-colors"
                     >
-                      <Linkedin className="w-4 h-4" />
+                      <Linkedin className="w-4 h-4" aria-hidden="true" />
                     </Link>
                   )}
                 </div>
@@ -422,9 +423,10 @@ export default function LeadershipPage() {
                       href={executive.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Connect with ${executive.name} on LinkedIn`}
                       className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-600 hover:bg-red-600 hover:text-white transition-colors"
                     >
-                      <Linkedin className="w-4 h-4" />
+                      <Linkedin className="w-4 h-4" aria-hidden="true" />
                     </Link>
                   )}
                 </div>
@@ -465,9 +467,10 @@ export default function LeadershipPage() {
                       href={director.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Connect with ${director.name} on LinkedIn`}
                       className="text-gray-500 hover:text-red-600 transition-colors"
                     >
-                      <Linkedin className="w-4 h-4 mx-auto" />
+                      <Linkedin className="w-4 h-4 mx-auto" aria-hidden="true" />
                     </Link>
                   )}
                 </div>

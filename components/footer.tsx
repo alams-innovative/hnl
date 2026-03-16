@@ -265,25 +265,28 @@ export function Footer() {
                 href="https://www.linkedin.com/company/hitech-networks-private-limited/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Follow HNL on LinkedIn"
                 className="h-9 w-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors"
               >
-                <Linkedin className="h-4 w-4" />
+                <Linkedin className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
                 href="https://www.facebook.com/share/18Mu2qiqui/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Follow HNL on Facebook"
                 className="h-9 w-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors"
               >
-                <Facebook className="h-4 w-4" />
+                <Facebook className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
                 href="https://www.instagram.com/hitech_networks_limited?igsh=N2V6MTkzNWIzbG9n&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Follow HNL on Instagram"
                 className="h-9 w-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-red-600 transition-colors"
               >
-                <Twitter className="h-4 w-4" />
+                <Twitter className="h-4 w-4" aria-hidden="true" />
               </a>
             </div>
           </div>
