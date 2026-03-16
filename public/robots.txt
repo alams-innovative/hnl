@@ -1,6 +1,10 @@
 # HNL Robots.txt
-# Last Updated: January 2025
+# Last Updated: March 2026
 # Website: https://hnl.com.pk
+
+# ===========================================
+# SEARCH ENGINE CRAWLERS
+# ===========================================
 
 # Allow all major search engines
 User-agent: *
@@ -18,12 +22,21 @@ Allow: /
 User-agent: Googlebot-Video
 Allow: /
 
-# Bing
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+# Bing / Microsoft
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
 User-agent: BingPreview
+Allow: /
+
+User-agent: msnbot
 Allow: /
 
 # Yahoo
@@ -36,17 +49,42 @@ User-agent: Yandex
 Allow: /
 Crawl-delay: 1
 
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexImages
+Allow: /
+
 # Baidu
 User-agent: Baiduspider
 Allow: /
 Crawl-delay: 2
+
+User-agent: Baiduspider-image
+Allow: /
 
 # DuckDuckGo
 User-agent: DuckDuckBot
 Allow: /
 Crawl-delay: 1
 
-# AI Crawlers - OpenAI/ChatGPT
+# Naver (Korea)
+User-agent: Yeti
+Allow: /
+
+# Seznam (Czech)
+User-agent: SeznamBot
+Allow: /
+
+# Sogou (China)
+User-agent: Sogou
+Allow: /
+
+# ===========================================
+# AI/LLM CRAWLERS - ALLOWED
+# ===========================================
+
+# OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
 Crawl-delay: 2
@@ -54,40 +92,86 @@ Crawl-delay: 2
 User-agent: ChatGPT-User
 Allow: /
 
-# AI Crawlers - Google AI/Gemini
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google AI / Gemini / Bard
 User-agent: Google-Extended
 Allow: /
 Crawl-delay: 2
 
-# AI Crawlers - Anthropic/Claude
+User-agent: Google-InspectionTool
+Allow: /
+
+# Anthropic / Claude
 User-agent: anthropic-ai
 Allow: /
 Crawl-delay: 2
 
 User-agent: Claude-Web
 Allow: /
+Crawl-delay: 2
 
-# AI Crawlers - Perplexity
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 2
+
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 Crawl-delay: 2
 
-# AI Crawlers - Meta
+# Meta AI / Facebook
 User-agent: FacebookBot
 Allow: /
 
 User-agent: meta-externalagent
 Allow: /
 
-# AI Crawlers - Cohere
-User-agent: cohere-ai
+User-agent: Meta-ExternalFetcher
 Allow: /
 
-# AI Crawlers - Amazon
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+Crawl-delay: 2
+
+# Amazon AI
 User-agent: Amazonbot
 Allow: /
 
-# Social Media
+# Microsoft AI / Copilot
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# You.com AI
+User-agent: YouBot
+Allow: /
+
+# Hugging Face
+User-agent: HuggingFaceBot
+Allow: /
+
+# AI2 / Allen Institute
+User-agent: AI2Bot
+Allow: /
+
+# Common Crawl (used for AI training)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 3
+
+# Diffbot (AI extraction)
+User-agent: Diffbot
+Allow: /
+
+# ===========================================
+# SOCIAL MEDIA CRAWLERS
+# ===========================================
+
 User-agent: Twitterbot
 Allow: /
 
@@ -100,13 +184,71 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# Disallow private/admin areas
+User-agent: Slackbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+User-agent: Pinterestbot
+Allow: /
+
+# ===========================================
+# SEO & ANALYTICS TOOLS
+# ===========================================
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 5
+
+User-agent: DotBot
+Allow: /
+
+User-agent: rogerbot
+Allow: /
+
+# ===========================================
+# ARCHIVE CRAWLERS
+# ===========================================
+
+User-agent: ia_archiver
+Allow: /
+
+User-agent: archive.org_bot
+Allow: /
+
+# ===========================================
+# DISALLOW RULES
+# ===========================================
+
+# Disallow private/admin areas for all bots
+User-agent: *
 Disallow: /api/
 Disallow: /admin/
-Disallow: /_next/static/
+Disallow: /_next/static/chunks/
 Disallow: /_next/image/
 Disallow: /*.json$
 Disallow: /scripts/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /node_modules/
+
+# ===========================================
+# ALLOW RULES (Override Disallows)
+# ===========================================
 
 # Allow important static files
 Allow: /_next/static/css/
@@ -118,13 +260,24 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /ai.txt
 Allow: /.well-known/
+Allow: /manifest.json
+Allow: /site.webmanifest
+Allow: /browserconfig.xml
+Allow: /favicon.ico
+Allow: /og-image.jpg
 
-# Sitemaps
+# ===========================================
+# SITEMAPS
+# ===========================================
+
 Sitemap: https://hnl.com.pk/sitemap.xml
 Sitemap: https://hnl.com.pk/sitemap-main.xml
 Sitemap: https://hnl.com.pk/sitemap-products.xml
 Sitemap: https://hnl.com.pk/sitemap-services.xml
 Sitemap: https://hnl.com.pk/sitemap-resources.xml
 
-# Host
+# ===========================================
+# HOST
+# ===========================================
+
 Host: https://hnl.com.pk

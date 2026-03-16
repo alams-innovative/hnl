@@ -2,20 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
+  <!-- Products Hub -->
+  <url>
+    <loc>https://hnl.com.pk/products</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://hnl.com.pk/og-image.jpg</image:loc>
+      <image:title>HNL Products - Generators Solar BESS Pakistan</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Generators Hub -->
+  <url>
+    <loc>https://hnl.com.pk/products/generators</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://hnl.com.pk/og-image.jpg</image:loc>
+      <image:title>Diesel Generators Pakistan - AGG Power Perkins</image:title>
+    </image:image>
+  </url>
+  
   <!-- Generators - AGG Power A-Series -->
   <url>
     <loc>https://hnl.com.pk/products/generators/a-series-small</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://hnl.com.pk/agg-power-diesel-generator-pakistan.jpg</image:loc>
-      <image:title>AGG Power A-Series Small Diesel Generators Pakistan</image:title>
+      <image:loc>https://hnl.com.pk/og-image.jpg</image:loc>
+      <image:title>AGG Power A-Series Small Diesel Generators 10-50kVA Pakistan</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/generators/a-series-medium</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,19 +47,19 @@
   <!-- Generators - Perkins P-Series -->
   <url>
     <loc>https://hnl.com.pk/products/generators/p-series-small</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/generators/p-series-medium</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/generators/p-series-large</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -43,71 +67,87 @@
   <!-- Generators by Size -->
   <url>
     <loc>https://hnl.com.pk/products/generators/small</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/generators/medium</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/generators/large</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
-  <!-- Solar Products -->
+  <!-- Solar Products Hub -->
+  <url>
+    <loc>https://hnl.com.pk/products/solar</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://hnl.com.pk/og-image.jpg</image:loc>
+      <image:title>Solar Solutions Pakistan - HNL</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://hnl.com.pk/products/solar/residential</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/solar/commercial</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/solar/industrial</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/solar/hybrid</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
-  <!-- Product Specifications -->
+  <!-- Product Specifications Hub -->
+  <url>
+    <loc>https://hnl.com.pk/products/specifications</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
   <url>
     <loc>https://hnl.com.pk/products/specifications/technical</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/specifications/performance</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/specifications/epa</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://hnl.com.pk/products/specifications/field-strength</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

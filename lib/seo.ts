@@ -8,7 +8,7 @@ import { siteConfig } from "./site-config"
 
 export interface BreadcrumbItem {
   name: string
-  url: string
+  item: string
 }
 
 // Breadcrumb Schema (Google Rich Results)
@@ -20,7 +20,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `${siteConfig.urls.main}${item.url}`,
+      item: `${siteConfig.urls.main}${item.item}`,
     })),
   }
 }

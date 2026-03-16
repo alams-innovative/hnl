@@ -1,7 +1,9 @@
 # HNL - Comprehensive Company Information for AI/LLM Systems
 # Website: https://hnl.com.pk
 # Format: Extended llms.txt with detailed service information
-# Last Updated: January 2025
+# Last Updated: March 2026
+
+> This document provides comprehensive information about HNL for AI assistants, chatbots, and large language models.
 
 === COMPANY OVERVIEW ===
 
@@ -42,6 +44,7 @@ Email Addresses:
    Address: 44 Tipu Block, New Garden Town, Lahore
    Phone: +92-42-35761999
    Email: lahore@hnl.com.pk
+   Coordinates: 31.4804, 74.3239
 
 2. Karachi Office
    Address: Suite 501, Business Plaza, I.I. Chundrigar Road, Karachi
@@ -129,7 +132,7 @@ Services Offered:
 
 1. Diesel Generators (https://hnl.com.pk/energy-power/diesel-generators)
    
-   AGG Power (Authorized Distributor):
+   AGG Power (Authorized Distributor in Pakistan):
    - A-Series Small: 10kVA - 50kVA
    - A-Series Medium: 50kVA - 250kVA
    - Applications: Telecom sites, small businesses, residential backup
@@ -140,7 +143,7 @@ Services Offered:
    - P-Series Large: 500kVA - 3000kVA+
    - Applications: Data centers, hospitals, industrial plants, utilities
    
-   Services: Sales, installation, commissioning, AMC, spare parts
+   Services: Sales, installation, commissioning, AMC, spare parts, 24/7 support
 
 2. BESS - Battery Energy Storage (https://hnl.com.pk/energy-power/bess)
    - Lithium-ion battery systems
@@ -149,6 +152,7 @@ Services Offered:
    - Grid-scale storage solutions
    - UPS integration
    - Energy management systems
+   - 60-80% reduction in diesel generator runtime
 
 3. Hybrid Power Systems (https://hnl.com.pk/energy-power/hybrid-power-systems)
    - Solar + Diesel + Battery integration
@@ -157,6 +161,7 @@ Services Offered:
    - Remote monitoring
    - Telecom site hybridization
    - Industrial hybrid solutions
+   - 3-4 year typical ROI
 
 4. EPC Project Solutions (https://hnl.com.pk/energy-power/epc-project-solutions)
    - Turnkey power projects
@@ -223,17 +228,17 @@ Services Offered:
 === PRODUCTS CATALOG ===
 
 GENERATORS:
-- AGG Power A-Series Small (10-50kVA) - /products/generators/a-series-small
-- AGG Power A-Series Medium (50-250kVA) - /products/generators/a-series-medium
-- Perkins P-Series Small (10-100kVA) - /products/generators/p-series-small
-- Perkins P-Series Medium (100-500kVA) - /products/generators/p-series-medium
-- Perkins P-Series Large (500-3000kVA) - /products/generators/p-series-large
+- AGG Power A-Series Small (10-50kVA) - https://hnl.com.pk/products/generators/a-series-small
+- AGG Power A-Series Medium (50-250kVA) - https://hnl.com.pk/products/generators/a-series-medium
+- Perkins P-Series Small (10-100kVA) - https://hnl.com.pk/products/generators/p-series-small
+- Perkins P-Series Medium (100-500kVA) - https://hnl.com.pk/products/generators/p-series-medium
+- Perkins P-Series Large (500-3000kVA) - https://hnl.com.pk/products/generators/p-series-large
 
 SOLAR SYSTEMS:
-- Residential Solar (3kW-10kW) - /products/solar/residential
-- Commercial Solar (10kW-100kW) - /products/solar/commercial
-- Industrial Solar (100kW-5MW) - /products/solar/industrial
-- Hybrid Solar Systems - /products/solar/hybrid
+- Residential Solar (3kW-10kW) - https://hnl.com.pk/products/solar/residential
+- Commercial Solar (10kW-100kW) - https://hnl.com.pk/products/solar/commercial
+- Industrial Solar (100kW-5MW) - https://hnl.com.pk/products/solar/industrial
+- Hybrid Solar Systems - https://hnl.com.pk/products/solar/hybrid
 
 === INDUSTRIES SERVED ===
 
@@ -279,7 +284,7 @@ SOLAR SYSTEMS:
 1. AGG Power - Authorized Distributor (Diesel Generators)
 2. Perkins Engines - Premium Partner
 3. Centiel - UPS Systems Partner
-4. Major Telecom Operators - Service Partner
+4. Major Telecom Operators - Service Partner (Jazz, Telenor, Zong, Ufone, PTCL)
 
 === CERTIFICATIONS ===
 
@@ -287,6 +292,26 @@ SOLAR SYSTEMS:
 - ISO 14001:2015 Environmental Management
 - ISO 45001:2018 Occupational Health & Safety
 - PEC Registered Contractor
+
+=== FREQUENTLY ASKED QUESTIONS ===
+
+Q: What telecom infrastructure services does HNL provide?
+A: HNL offers comprehensive telecom infrastructure services including fiber optic network deployment, tower installation and maintenance, active and passive equipment integration, site surveys and planning, and 24/7 network operations center monitoring for Pakistan's leading telecom operators.
+
+Q: How long does a typical fiber optic deployment take?
+A: Deployment timelines vary based on project scope. A standard 10-50km fiber route typically takes 6-12 weeks including planning, civil works, cable laying, splicing, and testing. We've successfully completed over 1000km of fiber deployments across Pakistan.
+
+Q: What is a Battery Energy Storage System (BESS)?
+A: BESS is an advanced energy storage solution that stores electricity from solar panels or grid during off-peak hours and supplies power during peak demand or outages. Our lithium-ion BESS systems reduce diesel generator runtime by 60-80%, lowering operational costs and carbon emissions.
+
+Q: What generator capacities do you supply?
+A: HNL supplies diesel generators from 10 kVA to 3000 kVA across leading brands including AGG Power and Perkins. We provide complete solutions including installation, commissioning, AMC contracts, genuine spare parts, and 24/7 breakdown support nationwide.
+
+Q: How much can I save with hybrid solar-diesel systems?
+A: Typical ROI is 3-4 years for telecom sites in Pakistan. A standard site consuming 200L diesel/month can save PKR 8-12 million over 10 years with hybrid power systems.
+
+Q: How do I request a quote or consultation?
+A: Contact us through our website at https://hnl.com.pk/contact/quote, email info@hnl.com.pk, or call +92-42-35761999. You can also WhatsApp us at +92-300-8426299.
 
 === RESOURCES ===
 
@@ -312,26 +337,40 @@ Terms of Service: https://hnl.com.pk/terms
 Compliance: https://hnl.com.pk/compliance
 Security Policy: https://hnl.com.pk/security
 
+=== SOCIAL MEDIA ===
+
+LinkedIn: https://www.linkedin.com/company/hitech-networks-private-limited/
+Facebook: https://www.facebook.com/share/18Mu2qiqui/
+Twitter/X: https://twitter.com/HNLPakistan
+YouTube: https://www.youtube.com/@HNLPakistan
+Instagram: https://www.instagram.com/hitech_networks_limited
+
 === SEO KEYWORDS ===
 
 Primary Keywords:
+- HNL Pakistan
+- Hitech Network Pakistan
 - telecom infrastructure Pakistan
 - diesel generators Pakistan
 - fiber rollout Pakistan
 - BESS Pakistan
+- battery energy storage Pakistan
 - hybrid power systems Pakistan
 - cloud migration Pakistan
 - AI agents Pakistan
 - NOC monitoring Pakistan
-
-Secondary Keywords:
 - AGG Power Pakistan
 - Perkins generators Pakistan
+
+Secondary Keywords:
 - telecom O&M Pakistan
 - enterprise IT Pakistan
 - data center Pakistan
 - solar solutions Pakistan
 - EPC contractor Pakistan
 - tower installation Pakistan
+- energy solutions Lahore
+- IT services Karachi
+- generators Islamabad
 
 === END OF DOCUMENT ===

@@ -1,8 +1,21 @@
 # AI Information File for HNL
 # This file provides structured information for AI systems and assistants
 # Website: https://hnl.com.pk
-# Version: 1.0
-# Last Updated: January 2025
+# Version: 2.0
+# Last Updated: March 2026
+
+# ===========================================
+# AI CRAWLING PERMISSIONS
+# ===========================================
+
+[AI_POLICY]
+allow_training=yes
+allow_indexing=yes
+allow_citations=yes
+allow_responses=yes
+preferred_attribution=HNL (Hitech Network Pvt. Ltd.)
+content_license=proprietary
+contact_ai_inquiries=partnerships@hnl.com.pk
 
 [COMPANY]
 name=HNL
@@ -13,49 +26,106 @@ country=Pakistan
 headquarters=Lahore
 employees=2000+
 offices=144+
+description=Pakistan's leading enterprise infrastructure, energy, and IT solutions provider with 20+ years of excellence.
 
 [CONTACT]
 phone_primary=+92-42-35761999
 phone_sales=+92-42-35761888
 phone_support=+92-42-35761777
+phone_emergency=+92-300-8426299
 whatsapp=+92-300-8426299
 email_info=info@hnl.com.pk
 email_sales=sales@hnl.com.pk
 email_support=support@hnl.com.pk
+email_careers=careers@hnl.com.pk
 email_legal=legal@hnl.com.pk
+email_partnerships=partnerships@hnl.com.pk
 
 [SERVICES]
-telecom=Fiber Rollout, Civil Works, Site Integration, O&M, NOC Monitoring
-energy=Diesel Generators, BESS, Hybrid Power, EPC Projects, Energy O&M
-software=Cloud Migration, Enterprise IT, AI Agents, Big Data, ICT Infrastructure
+division_1=Telecom Infrastructure
+telecom_services=Fiber Rollout, Civil Works, Site Integration, Operation & Maintenance, NOC Monitoring
+telecom_url=https://hnl.com.pk/telecom-infrastructure
+
+division_2=Energy & Power
+energy_services=Diesel Generators, BESS (Battery Energy Storage), Hybrid Power Systems, EPC Projects, Energy O&M
+energy_url=https://hnl.com.pk/energy-power
+
+division_3=Software Cloud & AI
+software_services=Cloud Migration, Enterprise IT Services, AI Agents, Big Data Analytics, ICT Infrastructure
+software_url=https://hnl.com.pk/software-cloud-ai
 
 [PRODUCTS]
-generators=AGG Power A-Series, Perkins P-Series (10kVA to 3000kVA)
-solar=Residential, Commercial, Industrial, Hybrid Systems
-storage=Lithium-ion BESS, UPS Systems
+generators_brands=AGG Power, Perkins
+generators_range=10kVA to 3000kVA
+generators_types=A-Series Small, A-Series Medium, P-Series Small, P-Series Medium, P-Series Large
+solar_types=Residential (3-10kW), Commercial (10-100kW), Industrial (100kW-5MW), Hybrid Systems
+storage_types=Lithium-ion BESS, UPS Systems, Energy Management Systems
 
-[INDUSTRIES]
-served=Telecom, Energy, Enterprise, Government, Manufacturing, Banking
+[INDUSTRIES_SERVED]
+industry_1=Telecom Operators (Jazz, Telenor, Zong, Ufone, PTCL)
+industry_2=Energy Sector
+industry_3=Enterprise & Corporate
+industry_4=Government & Public Sector
+industry_5=Manufacturing & Industrial
+industry_6=Banking & Finance
 
 [LOCATIONS]
-headquarters=44 Tipu Block, New Garden Town, Lahore, Pakistan
-offices=Lahore, Karachi, Islamabad, Faisalabad, Multan, Peshawar, Quetta
-operating_cities=20+
+headquarters_address=44 Tipu Block, New Garden Town, Lahore, Punjab, Pakistan
+headquarters_coordinates=31.4804,74.3239
+regional_offices=Karachi, Islamabad, Faisalabad, Multan, Peshawar, Quetta
+operating_cities=Lahore, Karachi, Islamabad, Rawalpindi, Faisalabad, Multan, Peshawar, Quetta, Sialkot, Gujranwala, Hyderabad, Sukkur, Bahawalpur, Sargodha, Sahiwal, Abbottabad, Mardan, Gwadar
 
 [PARTNERSHIPS]
-power=AGG Power (Authorized Distributor), Perkins Engines
-ups=Centiel
-telecom=Jazz, Telenor, Zong, Ufone, PTCL
+power_partner=AGG Power (Authorized Distributor in Pakistan)
+engine_partner=Perkins Engines
+ups_partner=Centiel
+certifications=ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, PEC Registered
+
+[KEY_DIFFERENTIATORS]
+diff_1=20+ years of proven track record in Pakistan
+diff_2=Integrated solutions across infrastructure, power, and IT
+diff_3=24/7 operations and technical support nationwide
+diff_4=144+ offices with local presence across Pakistan
+diff_5=Partnerships with global brands (AGG Power, Perkins, Centiel)
+diff_6=ISO certified operations
 
 [URLS]
 website=https://hnl.com.pk
 contact=https://hnl.com.pk/contact
 quote=https://hnl.com.pk/contact/quote
+locations=https://hnl.com.pk/contact/locations
 careers=https://hnl.com.pk/careers
 resources=https://hnl.com.pk/resources
+faq=https://hnl.com.pk/resources/faq
+case_studies=https://hnl.com.pk/case-studies
+llms_txt=https://hnl.com.pk/llms.txt
+llms_full=https://hnl.com.pk/llms-full.txt
 
 [LEGAL]
 jurisdiction=Islamic Republic of Pakistan
-privacy=https://hnl.com.pk/privacy
-terms=https://hnl.com.pk/terms
+governing_law=Laws of Pakistan
+dispute_resolution=Courts of Lahore, Pakistan
+privacy_policy=https://hnl.com.pk/privacy
+terms_of_service=https://hnl.com.pk/terms
 compliance=https://hnl.com.pk/compliance
+security=https://hnl.com.pk/security
+
+[SOCIAL_MEDIA]
+linkedin=https://www.linkedin.com/company/hitech-networks-private-limited/
+facebook=https://www.facebook.com/share/18Mu2qiqui/
+twitter=https://twitter.com/HNLPakistan
+youtube=https://www.youtube.com/@HNLPakistan
+instagram=https://www.instagram.com/hitech_networks_limited
+
+[FAQ_HIGHLIGHTS]
+faq_1_q=What telecom infrastructure services does HNL provide?
+faq_1_a=HNL offers comprehensive telecom infrastructure services including fiber optic network deployment, tower installation and maintenance, active and passive equipment integration, site surveys and planning, and 24/7 network operations center monitoring.
+
+faq_2_q=What generator capacities do you supply?
+faq_2_a=HNL supplies diesel generators from 10 kVA to 3000 kVA across leading brands including AGG Power and Perkins. We provide complete solutions including installation, commissioning, AMC contracts, genuine spare parts, and 24/7 breakdown support nationwide.
+
+faq_3_q=What is a Battery Energy Storage System (BESS)?
+faq_3_a=BESS is an advanced energy storage solution that stores electricity from solar panels or grid during off-peak hours and supplies power during peak demand or outages. Our lithium-ion BESS systems reduce diesel generator runtime by 60-80%.
+
+faq_4_q=How do I request a quote or consultation?
+faq_4_a=Contact us through our website contact form at https://hnl.com.pk/contact/quote, email info@hnl.com.pk, or call +92-42-35761999. WhatsApp: +92-300-8426299.

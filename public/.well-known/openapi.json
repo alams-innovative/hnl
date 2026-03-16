@@ -1,0 +1,194 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "HNL Pakistan Information API",
+    "description": "API for retrieving information about HNL (Hitech Network Pvt. Ltd.) - Pakistan's leading enterprise infrastructure, energy, and IT solutions provider.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "HNL Support",
+      "url": "https://hnl.com.pk/contact",
+      "email": "info@hnl.com.pk"
+    },
+    "termsOfService": "https://hnl.com.pk/terms",
+    "x-logo": {
+      "url": "https://hnl.com.pk/hnl-logo-mark.png",
+      "altText": "HNL Logo"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://hnl.com.pk",
+      "description": "HNL Main Website"
+    }
+  ],
+  "paths": {
+    "/llms.txt": {
+      "get": {
+        "summary": "Get Company Information for LLMs",
+        "description": "Returns structured company information optimized for large language models and AI assistants.",
+        "operationId": "getLLMsInfo",
+        "tags": ["Information"],
+        "responses": {
+          "200": {
+            "description": "Company information in plain text format",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms-full.txt": {
+      "get": {
+        "summary": "Get Comprehensive Company Information",
+        "description": "Returns detailed company information including all services, products, contacts, and FAQs.",
+        "operationId": "getLLMsFullInfo",
+        "tags": ["Information"],
+        "responses": {
+          "200": {
+            "description": "Comprehensive company information in plain text format",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai.txt": {
+      "get": {
+        "summary": "Get AI Policy Information",
+        "description": "Returns AI crawling policy and structured data for AI systems.",
+        "operationId": "getAIPolicy",
+        "tags": ["Information"],
+        "responses": {
+          "200": {
+            "description": "AI policy information",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resources/faq": {
+      "get": {
+        "summary": "Get Frequently Asked Questions",
+        "description": "Returns FAQ page with common questions about HNL services, products, and operations.",
+        "operationId": "getFAQ",
+        "tags": ["Resources"],
+        "responses": {
+          "200": {
+            "description": "FAQ page with structured FAQ schema",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contact": {
+      "get": {
+        "summary": "Get Contact Information",
+        "description": "Returns contact page with all HNL contact details and office locations.",
+        "operationId": "getContact",
+        "tags": ["Contact"],
+        "responses": {
+          "200": {
+            "description": "Contact page with LocalBusiness schema",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CompanyInfo": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "HNL"
+          },
+          "legalName": {
+            "type": "string",
+            "example": "Hitech Network Pvt. Ltd."
+          },
+          "tagline": {
+            "type": "string",
+            "example": "Energy Anytime Anywhere"
+          },
+          "founded": {
+            "type": "integer",
+            "example": 2004
+          },
+          "employees": {
+            "type": "string",
+            "example": "2000+"
+          },
+          "headquarters": {
+            "type": "string",
+            "example": "Lahore, Pakistan"
+          }
+        }
+      },
+      "ContactInfo": {
+        "type": "object",
+        "properties": {
+          "phone": {
+            "type": "string",
+            "example": "+92-42-35761999"
+          },
+          "whatsapp": {
+            "type": "string",
+            "example": "+92-300-8426299"
+          },
+          "email": {
+            "type": "string",
+            "example": "info@hnl.com.pk"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Information",
+      "description": "Company information endpoints for AI systems"
+    },
+    {
+      "name": "Resources",
+      "description": "Resource pages including FAQ and guides"
+    },
+    {
+      "name": "Contact",
+      "description": "Contact information and office locations"
+    }
+  ],
+  "externalDocs": {
+    "description": "HNL Website",
+    "url": "https://hnl.com.pk"
+  }
+}

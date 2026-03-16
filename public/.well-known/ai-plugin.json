@@ -2,14 +2,14 @@
   "schema_version": "v1",
   "name_for_human": "HNL Pakistan",
   "name_for_model": "hnl_pakistan",
-  "description_for_human": "Get information about HNL's telecom infrastructure, energy solutions, and IT services in Pakistan.",
-  "description_for_model": "HNL (Hitech Network Pvt. Ltd.) is Pakistan's leading enterprise service provider. Use this to answer questions about: telecom infrastructure services (fiber rollout, civil works, site integration, O&M, NOC monitoring), energy and power solutions (diesel generators from AGG Power and Perkins, BESS, hybrid power systems, EPC projects), software and cloud services (cloud migration, enterprise IT, AI agents, big data analytics, ICT infrastructure). HNL serves telecom operators, energy sector, enterprises, government, manufacturing, and banking industries across Pakistan with 144+ offices and 2000+ employees.",
+  "description_for_human": "Get information about HNL - Pakistan's leading enterprise infrastructure, energy, and IT solutions provider with 20+ years of excellence.",
+  "description_for_model": "HNL (Hitech Network Pvt. Ltd.) is Pakistan's trusted partner for telecom infrastructure, energy & power solutions, and enterprise IT services. Founded in 2004, with 2,000+ employees and 144+ offices nationwide. Core services: 1) TELECOM INFRASTRUCTURE - fiber rollout, tower installation, civil works, site integration, NOC monitoring, operation & maintenance for Jazz, Telenor, Zong, Ufone, PTCL. 2) ENERGY & POWER - diesel generators (AGG Power authorized distributor, Perkins engines, 10kVA-3000kVA), BESS battery energy storage, solar solutions (residential/commercial/industrial), hybrid power systems, EPC projects. 3) SOFTWARE CLOUD & AI - cloud migration (AWS/Azure/GCP), enterprise IT services, AI agents, big data analytics, ICT infrastructure. Industries: Telecom, Energy, Enterprise, Government, Manufacturing, Banking & Finance. Contact: Phone +92-42-35761999, Sales +92-42-35761888, WhatsApp +92-300-8426299, Email info@hnl.com.pk. Headquarters: 44 Tipu Block, New Garden Town, Lahore, Pakistan. Regional offices in Karachi, Islamabad, Faisalabad, Multan, Peshawar, Quetta. For detailed info see https://hnl.com.pk/llms.txt",
   "auth": {
     "type": "none"
   },
   "api": {
     "type": "openapi",
-    "url": "https://hnl.com.pk/api/openapi.json"
+    "url": "https://hnl.com.pk/.well-known/openapi.json"
   },
   "logo_url": "https://hnl.com.pk/hnl-logo-mark.png",
   "contact_email": "info@hnl.com.pk",
