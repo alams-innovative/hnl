@@ -6,7 +6,33 @@ import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo"
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | HNL Pakistan",
   description:
-    "Find answers to common questions about HNL's telecom infrastructure, energy solutions, and enterprise IT services in Pakistan.",
+    "Find answers to common questions about HNL's telecom infrastructure, diesel generators, BESS, solar solutions, and enterprise IT services in Pakistan. Contact +92-42-35761999.",
+  keywords: [
+    "HNL FAQ",
+    "telecom infrastructure questions",
+    "diesel generators FAQ Pakistan",
+    "BESS battery storage questions",
+    "hybrid power systems FAQ",
+    "cloud migration questions",
+    "HNL support",
+    "energy solutions Pakistan",
+  ],
+  openGraph: {
+    title: "Frequently Asked Questions | HNL Pakistan",
+    description: "Find answers to common questions about HNL's telecom infrastructure, energy solutions, and enterprise IT services in Pakistan.",
+    url: "https://hnl.com.pk/resources/faq",
+    type: "website",
+    images: [{ url: "https://hnl.com.pk/og-image.jpg", width: 1200, height: 630, alt: "HNL FAQ" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frequently Asked Questions | HNL Pakistan",
+    description: "Find answers to common questions about HNL's telecom infrastructure, energy solutions, and enterprise IT services in Pakistan.",
+    images: ["https://hnl.com.pk/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://hnl.com.pk/resources/faq",
+  },
 }
 
 const faqCategories = [
@@ -121,8 +147,8 @@ export default function FAQPage() {
 
   const allQuestions = faqCategories.flatMap((cat) =>
     cat.questions.map((q) => ({
-      questionName: q.question,
-      acceptedAnswerText: q.answer,
+      question: q.question,
+      answer: q.answer,
     })),
   )
 
