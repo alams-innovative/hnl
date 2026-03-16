@@ -7,8 +7,11 @@
 import { siteConfig } from "./site-config"
 
 export interface BreadcrumbItem {
-  name: string
-  item: string
+  name?: string
+  label?: string
+  item?: string
+  url?: string
+  href?: string
 }
 
 // Breadcrumb Schema (Google Rich Results)
@@ -16,12 +19,17 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: `${siteConfig.urls.main}${item.item}`,
-    })),
+    itemListElement: items.map((item, index) => {
+      const name = item.name || item.label || ""
+      const path = item.item || item.url || item.href || item.path || ""
+      
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name,
+        item: `${siteConfig.urls.main}${path}`,
+      }
+    }),
   }
 }
 
